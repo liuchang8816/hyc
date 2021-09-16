@@ -1,0 +1,11 @@
+﻿<HTCameras>
+  <HTCamera Name="Virtual" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTVirtualCamera"></HTCamera>
+  <HTCamera Name="Basler" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTBaslerCamera"></HTCamera>
+  <HTCamera Name="Baumer" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTBaumerCamera"></HTCamera>
+  <HTCamera Name="HikVision" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTHikCamera"></HTCamera>
+  <HTCamera Name="OPT" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTOPTCamera"></HTCamera>
+  <HTCamera Name="Imperx" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTImperxCamera"></HTCamera>
+  <HTCamera Name="Lucid" Assembly="HYC.HTCamera.GigE" ClassName="HYC.HTCamera.GigE.Cameras.HTLucidCamera"></HTCamera>
+  <HTCamera Name="EBus" Assembly="HYC.HTCamera.GigE.EBus" ClassName="HYC.HTCamera.GigE.EBus.HTEBusCamera"></HTCamera>
+  <HTCamera Name="Dummy" Assembly="HYC.HTCamera.Dummy" ClassName="HYC.HTCamera.Dummy.HTDummyCamera"></HTCamera>
+</HTCameras>

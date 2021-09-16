@@ -1,0 +1,5029 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.StandardAoi</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.StandardAoi.Algorithm.AlgParaName">
+            <summary>
+            算法参数名
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.AlgParaName.Code">
+            <summary>
+            参数代码
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.AlgParaName.Type">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.AlgParaName.Names">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DEFECT_STATISTICS">
+            <summary>
+            检测算法输出结果的结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICS.m_Display">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICS.m_Line">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICS.m_Dot">
+            <summary>
+            点，第一个辉点，第二个暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICS.m_Mura">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew">
+            <summary>
+            检测算法输出结果的结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Display">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Line">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Dot">
+            <summary>
+            点，第一个辉点，第二个暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Mura">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Mura2">
+            <summary>
+            斑（其他）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve1">
+            <summary>
+            Reserve1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve2">
+            <summary>
+            Reserve2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve3">
+            <summary>
+            Reserve3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve4">
+            <summary>
+            Reserve4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve5">
+            <summary>
+            Reserve5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew.m_Reserve6">
+            <summary>
+            Reserve6
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnUpdateModuleInfoNew">
+            <summary>
+            更新算法参数（新的算法版本）
+            </summary>
+            <param name="lcdinfo">模组参数</param>
+            <param name="module">判定基准</param>
+            <param name="model">算法参数</param>
+            <param name="sd">屏蔽参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnUpdateModuleInfo">
+            <summary>
+            更新算法参数（旧版本）
+            </summary>
+            <param name="lcdinfo">模组参数</param>
+            <param name="module">判定基准</param>
+            <param name="model">算法参数</param>
+            <param name="sd">屏蔽参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnUpdateModuleInfoInt">
+            <summary>
+            更新算法参数（旧版本，Int型参数）
+            </summary>
+            <param name="lcdinfo">模组参数</param>
+            <param name="module">判定基准</param>
+            <param name="model">算法参数</param>
+            <param name="sd">屏蔽参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnHandleImage">
+            <summary>
+            处理图片
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="dataIn">图像数据输入</param>
+            <param name="nWidth">图像Width</param>
+            <param name="nHeight">图像Height</param>
+            <param name="nIndex">图片的Pattern序号</param>
+            <param name="nErr">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnHandleImageUInt16">
+            <summary>
+            处理图片
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="dataIn">图像数据输入</param>
+            <param name="nWidth">图像Width</param>
+            <param name="nHeight">图像Height</param>
+            <param name="nIndex">图片的Pattern序号</param>
+            <param name="nErr">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnUpdateImage">
+            <summary>
+            获取最终结果
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="data">图像输出</param>
+            <param name="pDefectInfo">总的不良信息</param>
+            <param name="pptnDefectInfo">所有画面的不良信息</param>
+            <param name="nNgCode">不良代码</param>
+            <param name="reserve">预留</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnHandleImgOut">
+            <summary>
+            获取处理后的图片
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="dataOut">图像数据输出</param>
+            <param name="nWidth">图像Width</param>
+            <param name="nHeight">图像Height</param>
+            <param name="nIndex">图片的Pattern序号</param>
+            <param name="nErr">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnPointDetail">
+            <summary>
+            获取不良坐标
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="data">不良坐标</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnPointMarkDetail">
+            <summary>
+            获取不良参数
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="data">不良参数</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.OnNGDetail">
+            <summary>
+            获取不良代码
+            </summary>
+            <param name="nMember">算法通道</param>
+            <param name="nNgCode">不良代码</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DetectionAlgorithm">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.AlgorithmType">
+            <summary>
+            算法类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnUpdateModuleInfoNew">
+            <summary>
+            更新算法参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnUpdateModuleInfo">
+            <summary>
+            更新算法参数（旧版本）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnUpdateModuleInfoInt">
+            <summary>
+            更新算法参数（旧版本，Int型参数）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnHandleImage">
+            <summary>
+            处理图片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnHandleImageUInt16">
+            <summary>
+            处理图片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnUpdateImage">
+            <summary>
+            获取最终结果
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnHandleImgOut">
+            <summary>
+            获取处理后的图片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnPointDetail">
+            <summary>
+            获取不良坐标
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnPointMarkDetail">
+            <summary>
+            获取不良参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.HT_OnNGDetail">
+            <summary>
+            获取不良代码
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.IntPtrDll">
+            <summary>
+            算法dll模块指针
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.StrDllProductVersion">
+            <summary>
+            dll文件版本信息
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.StrDllLastWriteTime">
+            <summary>
+            dll最后修改时间
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DetectionAlgorithm.AlgParaNames">
+            <summary>
+            算法参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameDot">
+            <summary>
+            点参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameDot_0">
+            <summary>
+            点参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameLine">
+            <summary>
+            线参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameLine_0">
+            <summary>
+            线参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameMura">
+            <summary>
+            斑参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameMura_0">
+            <summary>
+            斑参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameMura2">
+            <summary>
+            斑（其他）参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameMura2_0">
+            <summary>
+            斑（其他）参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve1">
+            <summary>
+            备用1的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve1_0">
+            <summary>
+            备用1的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve2">
+            <summary>
+            备用2的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve2_0">
+            <summary>
+            备用2的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve3">
+            <summary>
+            备用3的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve3_0">
+            <summary>
+            备用3的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve4">
+            <summary>
+            备用4的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve4_0">
+            <summary>
+            备用4的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve5">
+            <summary>
+            备用5的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve5_0">
+            <summary>
+            备用5的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve6">
+            <summary>
+            备用6的参数名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.ParaNameReserve6_0">
+            <summary>
+            备用6的参数名称--打光画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DisplayName">
+            <summary>
+            显示异常不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName">
+            <summary>
+            点不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName0">
+            <summary>
+            点不良名称-0
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName1">
+            <summary>
+            点不良名称-1
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName2">
+            <summary>
+            点不良名称-2
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName3">
+            <summary>
+            点不良名称-3
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName4">
+            <summary>
+            点不良名称-4
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName5">
+            <summary>
+            点不良名称-5
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.DotName6">
+            <summary>
+            点不良名称-6
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.LineName">
+            <summary>
+            线不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.MuraName">
+            <summary>
+            斑不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.MuraName2">
+            <summary>
+            斑（其他）不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve1Name">
+            <summary>
+            Reserve1不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve2Name">
+            <summary>
+            Reserve2不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve3Name">
+            <summary>
+            Reserve3不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve4Name">
+            <summary>
+            Reserve4不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve5Name">
+            <summary>
+            Reserve5不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Reserve6Name">
+            <summary>
+            Reserve6不良名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Algorithm.DetectionAlgorithm.NgDetailList">
+            <summary>
+            用于旧版算法的NG Code List
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.LoadDll(System.String)">
+            <summary>
+            加载算法dll
+            </summary>
+            <param name="strLocation">dll路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.Free">
+            <summary>
+            释放算法dll
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.LoadAlgParaNames">
+            <summary>
+            加载算法参数名
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.SaveAlgParaNames">
+            <summary>
+            保存算法参数名
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.GetModelName">
+            <summary>
+            获取算法参数名称
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.DetectionAlgorithm.GetNgCodeList">
+            <summary>
+            获取NG Code List，旧版本使用，新版本算法使用RecipeData中的NgCodeDataSet
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.PAT_SPEC">
+            <summary>
+            检测画面定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PAT_SPEC.PattName">
+            <summary>
+            Pattern名称
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PAT_SPEC.nIndex">
+            <summary>
+            Pattern在总PatternList中的Index
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PAT_SPEC.Remark">
+            <summary>
+            Pattern 名称注释
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PAT_SPEC.bHandle">
+            <summary>
+            画面是否检测
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.PATTERN_TYPE">
+            <summary>
+            检测画面类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_PWROFF">
+            <summary>
+            第一次打光画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY128">
+            <summary>
+            通用灰阶画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BLACK">
+            <summary>
+            通用Black画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RED">
+            <summary>
+            通用Red画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GREEN">
+            <summary>
+            通用Green画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BLUE">
+            <summary>
+            通用Blue画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_SURGE">
+            <summary>
+            通用电流检测画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_PWROFF2">
+            <summary>
+            最后一次打光画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_FLICKER">
+            <summary>
+            PTN_FLICKER
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WHITE">
+            <summary>
+            白画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WTOB">
+            <summary>
+            PTN_WTOB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BTOW">
+            <summary>
+            PTN_BTOW
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY64">
+            <summary>
+            64灰阶画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY32">
+            <summary>
+            32灰阶画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY25">
+            <summary>
+            25灰阶画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0F">
+            <summary>
+            Reserve0F
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0">
+            <summary>
+            Reserve0
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve1">
+            <summary>
+            Reserve1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve2">
+            <summary>
+            Reserve2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve3">
+            <summary>
+            Reserve3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve4">
+            <summary>
+            Reserve4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve5">
+            <summary>
+            Reserve5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve6">
+            <summary>
+            Reserve6
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve7">
+            <summary>
+            Reserve7
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve8">
+            <summary>
+            Reserve8
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve9">
+            <summary>
+            Reserve9
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveA">
+            <summary>
+            ReserveA
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveB">
+            <summary>
+            ReserveB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveC">
+            <summary>
+            ReserveC
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveD">
+            <summary>
+            ReserveD
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveE">
+            <summary>
+            ReserveE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_ReserveF">
+            <summary>
+            ReserveF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_H1">
+            <summary>
+            PTN_H1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_H2">
+            <summary>
+            PTN_H2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_V1">
+            <summary>
+            PTN_V1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_V2">
+            <summary>
+            PTN_V2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RED_G">
+            <summary>
+            Red画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RED_B">
+            <summary>
+            Red画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GREEN_R">
+            <summary>
+            Green画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GREEN_B">
+            <summary>
+            Green画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BLUE_R">
+            <summary>
+            Blue画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BLUE_G">
+            <summary>
+            Blue画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY128_R">
+            <summary>
+            GRAY128画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY128_G">
+            <summary>
+            GRAY128画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY128_B">
+            <summary>
+            GRAY128画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY64_R">
+            <summary>
+            GRAY64画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY64_G">
+            <summary>
+            GRAY64画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY64_B">
+            <summary>
+            GRAY64画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY255_R">
+            <summary>
+            GRAY255画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY255_G">
+            <summary>
+            GRAY255画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY255_B">
+            <summary>
+            GRAY255画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY32_R">
+            <summary>
+            GRAY32画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY32_G">
+            <summary>
+            GRAY32画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY32_B">
+            <summary>
+            GRAY32画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY45_R">
+            <summary>
+            GRAY45画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY45_G">
+            <summary>
+            GRAY32画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GRAY45_B">
+            <summary>
+            GRAY32画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Black_R">
+            <summary>
+            Black画面红色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Black_G">
+            <summary>
+            Black画面绿色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Black_B">
+            <summary>
+            Black画面蓝色滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GrayF">
+            <summary>
+            外观检正面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GrayB">
+            <summary>
+            外观检背面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_PowerOffF">
+            <summary>
+            外观检正面打光
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_PowerOffB">
+            <summary>
+            外观检背面打光
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_LEFT_EDGE">
+            <summary>
+            外观检PTN_LEFT_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RIGHT_EDGE">
+            <summary>
+            外观检PTN_RIGHT_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_UPPER_EDGE">
+            <summary>
+            外观检PTN_UPPER_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BOTTOM_EDGE">
+            <summary>
+            外观检PTN_BOTTOM_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0_EDGE">
+            <summary>
+            外观检PTN_Reserve0_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve1_EDGE">
+            <summary>
+            外观检PTN_Reserve1_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve2_EDGE">
+            <summary>
+            外观检PTN_Reserve2_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve3_EDGE">
+            <summary>
+            外观检PTN_Reserve3_EDGE
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_128GrayL">
+            <summary>
+            Mura检128GrayL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_128GrayR">
+            <summary>
+            Mura检128GrayR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RedL">
+            <summary>
+            Mura检RedL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RedR">
+            <summary>
+            Mura检RedR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GreenL">
+            <summary>
+            Mura检GreenL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GreenR">
+            <summary>
+            Mura检GreenR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BlueL">
+            <summary>
+            Mura检BlueL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BlueR">
+            <summary>
+            Mura检BlueR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_64GrayL">
+            <summary>
+            Mura检64GrayL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_64GrayR">
+            <summary>
+            Mura检64GrayR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WhiteL">
+            <summary>
+            Mura检WhiteL
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WhiteR">
+            <summary>
+            Mura检WhiteR
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0L">
+            <summary>
+            Mura检Reserve0L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0R">
+            <summary>
+            Mura检Reserve0R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve1L">
+            <summary>
+            Mura检Reserve1L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve1R">
+            <summary>
+            Mura检Reserve1R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve2L">
+            <summary>
+            Mura检Reserve2L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve2R">
+            <summary>
+            Mura检Reserve2R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve3L">
+            <summary>
+            Mura检Reserve3L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve3R">
+            <summary>
+            Mura检Reserve3R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve4L">
+            <summary>
+            Mura检Reserve4L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve4R">
+            <summary>
+            Mura检Reserve4R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve5L">
+            <summary>
+            Mura检Reserve5L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve5R">
+            <summary>
+            Mura检Reserve5R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve6L">
+            <summary>
+            Mura检Reserve6L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve6R">
+            <summary>
+            Mura检Reserve6R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve7L">
+            <summary>
+            Mura检Reserve7L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve7R">
+            <summary>
+            Mura检Reserve7R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve8L">
+            <summary>
+            Mura检Reserve8L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve8R">
+            <summary>
+            Mura检Reserve8R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve9L">
+            <summary>
+            Mura检Reserve9L
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve9R">
+            <summary>
+            Mura检Reserve9R
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_128GrayM">
+            <summary>
+            Mura检128GrayM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RedM">
+            <summary>
+            Mura检RedM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GreenM">
+            <summary>
+            Mura检GreenM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BlueM">
+            <summary>
+            Mura检BlueM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_64GrayM">
+            <summary>
+            Mura检64GrayM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WhiteM">
+            <summary>
+            Mura检WhiteM
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve0M">
+            <summary>
+            Mura检Reserve0M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve1M">
+            <summary>
+            Mura检Reserve1M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve2M">
+            <summary>
+            Mura检Reserve2M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve3M">
+            <summary>
+            Mura检Reserve3M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve4M">
+            <summary>
+            Mura检Reserve4M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve5M">
+            <summary>
+            Mura检Reserve5M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve6M">
+            <summary>
+            Mura检Reserve6M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve7M">
+            <summary>
+            Mura检Reserve7M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve8M">
+            <summary>
+            Mura检Reserve8M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_Reserve9M">
+            <summary>
+            Mura检Reserve9M
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_128GrayF">
+            <summary>
+            Mura检128GrayF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_128GrayB">
+            <summary>
+            Mura检128GrayB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RedF">
+            <summary>
+            Mura检RedF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_RedB">
+            <summary>
+            Mura检RedB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GreenF">
+            <summary>
+            Mura检GreenF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_GreenB">
+            <summary>
+            Mura检GreenB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BlueF">
+            <summary>
+            Mura检BlueF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_BlueB">
+            <summary>
+            Mura检BlueB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_64GrayF">
+            <summary>
+            Mura检64GrayF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_64GrayB">
+            <summary>
+            Mura检64GrayB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WhiteF">
+            <summary>
+            Mura检WhiteF
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_WhiteB">
+            <summary>
+            Mura检WhiteB
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_UpperLeft">
+            <summary>
+            尺寸检UpperLeft
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_UpperRight">
+            <summary>
+            尺寸检UpperRight
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_LowerLeft">
+            <summary>
+            尺寸检LowerLeft
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.PTN_LowerRight">
+            <summary>
+            尺寸检LowerRight
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.PATTERN_TYPE.COUNT_PTN">
+            <summary>
+            总画面数
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.LcdPara">
+            <summary>
+            模组参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.LcdName">
+            <summary>
+            模组名称
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.LcdInch">
+            <summary>
+            模组尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.PixelType">
+            <summary>
+            像素排列类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.HResolution">
+            <summary>
+            水平分辨率
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.VResolution">
+            <summary>
+            垂直分辨率
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.HSize">
+            <summary>
+            水平外形尺寸--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.VSize">
+            <summary>
+            垂直外形尺寸--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.HValide">
+            <summary>
+            水平有效显示尺寸--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.VValide">
+            <summary>
+            垂直有效显示尺寸--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.HPixelSize">
+            <summary>
+            水平像素大小--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.VPixelSize">
+            <summary>
+            垂直像素大小--物理尺寸
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.HBMSize">
+            <summary>
+            显示区域距离偏光板边缘的水平距离
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.VBMSize">
+            <summary>
+            显示区域距离偏光板边缘的垂直距离
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.nCountHandlePattern">
+            <summary>
+            模组包含多少个需要检测的Pattern
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Pat">
+            <summary>
+            每一个Pattern的详细信息
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.PatIndex">
+            <summary>
+            根据PATTERN_TYPE索引Pat的Index
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.nLcdDir">
+            <summary>
+            Cell压接模式 横向或竖向
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.nCountPattern">
+            <summary>
+            模组包含多少个Pattern
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.roiX">
+            <summary>
+            ROI区域X
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.roiY">
+            <summary>
+            ROI区域Y
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.roiW">
+            <summary>
+            ROI区域Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.roiH">
+            <summary>
+            ROI区域Height
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.DotParaCount">
+            <summary>
+            点类型参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.LineParaCount">
+            <summary>
+            线类型参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.MuraParaCount">
+            <summary>
+            斑类型参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Mura2ParaCount">
+            <summary>
+            斑其他类型参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve1ParaCount">
+            <summary>
+            Reserve1参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve2ParaCount">
+            <summary>
+            Reserve2参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve3ParaCount">
+            <summary>
+            Reserve3参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve4ParaCount">
+            <summary>
+            Reserve4参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve5ParaCount">
+            <summary>
+            Reserve5参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve6ParaCount">
+            <summary>
+            Reserve6参数数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.LcdName2">
+            <summary>
+            模组名称2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LcdPara.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.LcdPara.SetParaCount">
+            <summary>
+            更新参数数量
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.Methods">
+            <summary>
+            一些方法的集合
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Methods.GetPatternNames(HYC.StandardAoi.Parameter.DetectionType)">
+            <summary>
+            获取Pattern名称集合
+            </summary>
+            <param name="detectionType">检测类型</param>
+            <returns>Pattern名称集合</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Methods.GetPatternType(HYC.StandardAoi.Parameter.DetectionType,System.Int32)">
+            <summary>
+            获取PATTERN_TYPE
+            </summary>
+            <param name="detectionType">检测类型</param>
+            <param name="index">画面序号</param>
+            <returns>PATTERN_TYPE</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelDetail">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetail.displayGray">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetail.spotParam">
+            <summary>
+            点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetail.lineParam">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetail.muraParam">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelDetailOld">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailOld.displayGray">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailOld.spotParam">
+            <summary>
+            点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailOld.lineParam">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailOld.muraParam">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailOld.muraParam2">
+            <summary>
+            斑（其他）
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelDetailNew">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.displayGray">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.spotParam">
+            <summary>
+            点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.lineParam">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.muraParam">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.muraParam2">
+            <summary>
+            斑（其他）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve1">
+            <summary>
+            备用1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve2">
+            <summary>
+            备用2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve3">
+            <summary>
+            备用3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve4">
+            <summary>
+            备用4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve5">
+            <summary>
+            备用5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.Reserve6">
+            <summary>
+            备用6
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelDetailNew.DisplayDeviationValue">
+            <summary>
+            显示不良偏差值
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara4Detail">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.patternName">
+            <summary>
+            画面名称
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.displayGray">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.spotParam">
+            <summary>
+            点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.lineParam">
+            <summary>
+            线
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.muraParam">
+            <summary>
+            斑
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.muraParam2">
+            <summary>
+            斑（其他）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve1">
+            <summary>
+            备用1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve2">
+            <summary>
+            备用2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve3">
+            <summary>
+            备用3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve4">
+            <summary>
+            备用4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve5">
+            <summary>
+            备用5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.Reserve6">
+            <summary>
+            备用6
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4Detail.DisplayDeviationValue">
+            <summary>
+            显示不良偏差值
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara4Detail.GetParam(System.Int32,System.Int32)">
+            <summary>
+            获取参数值
+            </summary>
+            <param name="typeIndex">参数类型 0-9</param>
+            <param name="paraIndex">参数序号 0-49</param>
+            <returns>参数值</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara4Detail.SetParam(System.Int32,System.Int32,System.Single)">
+            <summary>
+            设置参数值
+            </summary>
+            <param name="typeIndex"></param>
+            <param name="paraIndex"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara3">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara3.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara3New">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara3New.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara4New">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara4New.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara4New.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara2">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara2.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara2Old">
+            <summary>
+            算法参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara2Old.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2Old.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2Old.ConvertFrom(HYC.StandardAoi.Algorithm.ModelPara4New)">
+            <summary>
+            从ModelPara4New转换数据
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara2New20">
+            <summary>
+            算法参数结构体（20个Pattern）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara2New20.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2New20.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2New20.ConvertFrom(HYC.StandardAoi.Algorithm.ModelPara4New)">
+            <summary>
+            从ModelPara4New转换数据
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModelPara2New50">
+            <summary>
+            算法参数结构体（50个Pattern）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModelPara2New50.ModelDetailConst">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2New50.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModelPara2New50.ConvertFrom(HYC.StandardAoi.Algorithm.ModelPara4New)">
+            <summary>
+            从ModelPara4New转换数据
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DARK_DOT">
+            <summary>
+            暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARK_DOT.ONE_DARK_DOT">
+            <summary>
+            一个暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARK_DOT.TWO_DARK_DOT">
+            <summary>
+            两个暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARK_DOT.THREE_DARK_DOT">
+            <summary>
+            三个暗点
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARK_DOT.COUNT_DARK_DOT">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD">
+            <summary>
+            亮点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.nBrightDot">
+            <summary>
+            辉点容许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.fMinDiameter">
+            <summary>
+            点状不良最小直径
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.fMaxDiameter">
+            <summary>
+            点状不良最大直径
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.nAllow">
+            <summary>
+            点状不良最小直径允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.btMinGray">
+            <summary>
+            点状不良最小灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.btMidGray">
+            <summary>
+            点状不良中间灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.btMaxGray">
+            <summary>
+            点状不良最大灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.nGrayNum1">
+            <summary>
+            点状不良灰度范围（MinGray --- MidGray)允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.nGrayNum2">
+            <summary>
+            点状不良灰度范围（MidGray --- MaxGray)内允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.fDensePointRange">
+            <summary>
+            密集点范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.nFilter">
+            <summary>
+            亮点以及异物使用滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARD.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD">
+            <summary>
+            暗点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_R">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_R">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_R">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_G">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_G">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_G">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_B">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_B">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_B">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_Z">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_Z">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_Z">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkLength">
+            <summary>
+            DarkLength
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkWidth">
+            <summary>
+            DarkWidth
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DotOtherPattern1">
+            <summary>
+            DotOtherPattern1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DotOtherPattern2">
+            <summary>
+            DotOtherPattern2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_64Gray">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_64Gray">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_64Gray">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllow_Black">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDistance_Black">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.DarkDotAllowInDistance_Black">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARD.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.LINESTANDARD">
+            <summary>
+            线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.fMinWidth">
+            <summary>
+            最小Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.fMaxWidth">
+            <summary>
+            最大Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.fLenth">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.nLineAllowNum">
+            <summary>
+            允许数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.fMaxLenth">
+            <summary>
+            亮的线屑最大长度;
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.nFilter">
+            <summary>
+            亮的线屑使用滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARD.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.MURASTANDARD">
+            <summary>
+            Mura不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARD.Radius">
+            <summary>
+            Radius
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARD.Contrast">
+            <summary>
+            Contrast
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARD.Param1">
+            <summary>
+            Param1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARD.Param2">
+            <summary>
+            Param2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARD.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModulePara">
+            <summary>
+            判定基准
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.nMaxDefect">
+            <summary>
+            最大不良数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.BrightDotDefine">
+            <summary>
+            亮点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.DarkDotDefine">
+            <summary>
+            暗点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.BrightLineDefine">
+            <summary>
+            亮线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.DarkLineDefine">
+            <summary>
+            暗线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModulePara.MuraDefine">
+            <summary>
+            Mura不良判定定义
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModulePara.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModulePara.SetArray">
+            <summary>
+            设置数组大小
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT">
+            <summary>
+            亮点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.nBrightDot">
+            <summary>
+            辉点容许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.fMinDiameter">
+            <summary>
+            点状不良最小直径
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.fMaxDiameter">
+            <summary>
+            点状不良最大直径
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.nAllow">
+            <summary>
+            点状不良最小直径允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.btMinGray">
+            <summary>
+            点状不良最小灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.btMidGray">
+            <summary>
+            点状不良中间灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.btMaxGray">
+            <summary>
+            点状不良最大灰度值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.nGrayNum1">
+            <summary>
+            点状不良灰度范围（MinGray --- MidGray)允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.nGrayNum2">
+            <summary>
+            点状不良灰度范围（MidGray --- MaxGray)内允许数目
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.fDensePointRange">
+            <summary>
+            密集点范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.nFilter">
+            <summary>
+            亮点以及异物使用滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.BRIGHTDOTSTANDARDINT.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT">
+            <summary>
+            暗点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_R">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_R">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_R">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_G">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_G">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_G">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_B">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_B">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_B">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_Z">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_Z">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_Z">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkLength">
+            <summary>
+            DarkLength
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkWidth">
+            <summary>
+            DarkWidth
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DotOtherPattern1">
+            <summary>
+            DotOtherPattern1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DotOtherPattern2">
+            <summary>
+            DotOtherPattern2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_64Gray">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_64Gray">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_64Gray">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllow_Black">
+            <summary>
+            总的允许个数;如单个暗点允许，二暗点允许
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDistance_Black">
+            <summary>
+            判定范围
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.DarkDotAllowInDistance_Black">
+            <summary>
+            在一定范围内允许个数;与上一个参数配搭使用
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.DARKDOTSTANDARDINT.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.LINESTANDARDINT">
+            <summary>
+            线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.fMinWidth">
+            <summary>
+            最小Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.fMaxWidth">
+            <summary>
+            最大Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.fLenth">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.nLineAllowNum">
+            <summary>
+            允许数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.fMaxLenth">
+            <summary>
+            亮的线屑最大长度;
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.nFilter">
+            <summary>
+            亮的线屑使用滤光片
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.LINESTANDARDINT.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.MURASTANDARDINT">
+            <summary>
+            Mura不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARDINT.Radius">
+            <summary>
+            Radius
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARDINT.Contrast">
+            <summary>
+            Contrast
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARDINT.Param1">
+            <summary>
+            Param1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARDINT.Param2">
+            <summary>
+            Param2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.MURASTANDARDINT.Reserve">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ModuleParaINT">
+            <summary>
+            判定基准
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.nMaxDefect">
+            <summary>
+            最大不良数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.BrightDotDefine">
+            <summary>
+            亮点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.DarkDotDefine">
+            <summary>
+            暗点不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.BrightLineDefine">
+            <summary>
+            亮线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.DarkLineDefine">
+            <summary>
+            暗线不良判定定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ModuleParaINT.MuraDefine">
+            <summary>
+            Mura不良判定定义
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ModuleParaINT.ConvertFrom(HYC.StandardAoi.Algorithm.ModulePara)">
+            <summary>
+            从Float型结构体转换
+            </summary>
+            <param name="modulePara"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ShieldOld">
+            <summary>
+            屏蔽参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldOld.ShieldDetailConst">
+            <summary>
+            屏蔽参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ShieldOld.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.ShieldOld.ConvertFrom(HYC.StandardAoi.Algorithm.Shield)">
+            <summary>
+            转换数据
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ShieldDetailOld">
+            <summary>
+            屏蔽参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetailOld.ShieldParamDot">
+            <summary>
+            点屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetailOld.ShieldParamLine">
+            <summary>
+            线屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetailOld.ShieldParamMura">
+            <summary>
+            斑屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetailOld.ShieldParamMura2">
+            <summary>
+            斑（其他）屏蔽区域
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.Shield">
+            <summary>
+            屏蔽参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.Shield.ShieldDetailConst">
+            <summary>
+            屏蔽参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Shield.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.Shield20">
+            <summary>
+            屏蔽参数结构体（20个画面）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.Shield20.ShieldDetailConst">
+            <summary>
+            屏蔽参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Shield20.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Shield20.ConvertFrom(HYC.StandardAoi.Algorithm.Shield)">
+            <summary>
+            转换数据
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.ShieldDetail">
+            <summary>
+            屏蔽参数结构体
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Dot">
+            <summary>
+            点屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Line">
+            <summary>
+            线屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Mura">
+            <summary>
+            斑屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Mura2">
+            <summary>
+            斑（其他）屏蔽区域
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve1">
+            <summary>
+            备用1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve2">
+            <summary>
+            备用2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve3">
+            <summary>
+            备用3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve4">
+            <summary>
+            备用4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve5">
+            <summary>
+            备用5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Algorithm.ShieldDetail.Reserve6">
+            <summary>
+            备用6
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.Win32API">
+            <summary>
+            Win32 API
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Win32API.LoadLibrary(System.String)">
+            <summary>
+            加载动态链接库
+            </summary>
+            <param name="dllToLoad">dll文件名</param>
+            <returns>dll模块指针</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Win32API.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            获取函数指针
+            </summary>
+            <param name="hModule">dll模块指针</param>
+            <param name="procedureName">方法名</param>
+            <returns>函数指针</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.Win32API.FreeLibrary(System.IntPtr)">
+            <summary>
+            释放动态链接库
+            </summary>
+            <param name="hModule">dll模块指针</param>
+            <returns>释放释放成功</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Algorithm.WinCCTool">
+            <summary>
+            WinCCTool.dll导入的算法
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.WinCCTool.HT_OnMarkPositionImage(System.Byte[],System.Int32,System.Int32,System.Int32[],System.Int32)">
+            <summary>
+            在图像上绘制矩形区域
+            </summary>
+            <param name="data">图像数据</param>
+            <param name="nWidth">图像Width</param>
+            <param name="nHeight">图像Height</param>
+            <param name="lstPos">矩形区域的数组</param>
+            <param name="nPos">矩形区域数量</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.WinCCTool.HT_GrayTest(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Double@,System.Int32[])">
+            <summary>
+            图片灰度测试
+            </summary>
+            <param name="dataIn">图像数据输入</param>
+            <param name="dataOut">图像数据输出</param>
+            <param name="w">图像Width</param>
+            <param name="h">图像Height</param>
+            <param name="nErr">错误代码</param>
+            <param name="aoi">AOI区域</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Algorithm.WinCCTool.HT_GrayTest2(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Double@,System.Int32[])">
+            <summary>
+            图像灰度测试（黑画面）
+            </summary>
+            <param name="dataIn">图像数据输入</param>
+            <param name="dataOut">图像数据输出</param>
+            <param name="w">图像Width</param>
+            <param name="h">图像Height</param>
+            <param name="nErr">错误代码</param>
+            <param name="aoi">AOI区域</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Class.DetectionFlow">
+            <summary>
+            检测流程类
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Class.DetectionFlow.para">
+            <summary>
+            检测流程参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Class.DetectionFlow.detectionResult">
+            <summary>
+            检测结果
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Class.DetectionFlow.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Class.DetectionFlow.Algorithm">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Class.DetectionFlow.CurRecipe">
+            <summary>
+            当前机种
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Class.DetectionFlow.dictLock">
+            <summary>
+            访问
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.StartDetection(HYC.StandardAoi.Parameter.DetectionPara)">
+            <summary>
+            开始执行检测流程
+            </summary>
+            <param name="para">检测参数</param>
+            <returns>检测结果</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.GetImagesPrepare(System.Int32)">
+            <summary>
+            获取图片前的准备工作
+            </summary>
+            <param name="patternIndex">画面序号</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.PrepareCamera(System.Int32)">
+            <summary>
+            相机的准备工作
+            </summary>
+            <param name="patternIndex">画面序号</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.PreparePower(System.Int32)">
+            <summary>
+            光源的准备工作
+            </summary>
+            <param name="patternIndex">画面序号</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.PrepareTester(System.Int32)">
+            <summary>
+            检查机的准备工作
+            </summary>
+            <param name="patternIndex">画面序号</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.GetImages(System.Int32)">
+            <summary>
+            获取图像
+            </summary>
+            <param name="patternIndex"></param>
+            <returns>获取图像是否成功</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.SaveImage(HYC.StandardAoi.Parameter.ImageData,System.String,System.String)">
+            <summary>
+            保存图片（原图）
+            </summary>
+            <param name="data">图片数据</param>
+            <param name="pattName">Pattern名称，用作文件名</param>
+            <param name="remark">画面备注名</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.SaveProcessedImage">
+            <summary>
+            保存处理图
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.GenerateIndexImage">
+            <summary>
+            生成NG示意图
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.GetImagesEnd">
+            <summary>
+            获取图像完成后的处理
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.ImageProcess(System.Threading.CancellationToken)">
+            <summary>
+            图像处理，获取检测结果
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.ShowMessage(System.String,System.Boolean)">
+            <summary>
+            显示消息
+            </summary>
+            <param name="text">文本</param>
+            <param name="isError">是否为异常信息</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Class.DetectionFlow.WriteLog(System.String,System.Boolean)">
+            <summary>
+            写日志
+            </summary>
+            <param name="text">文本</param>
+            <param name="isError">是否为异常信息</param>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.DetectionStarted">
+            <summary>
+            检测开始事件
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.DetectionCompleted">
+            <summary>
+            检测完成事件
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.ImageReceived">
+            <summary>
+            接收到图像数据
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.GetImagesReady">
+            <summary>
+            获取图片已就绪，单个Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.GetImagesCompleted">
+            <summary>
+            获取图片完成，单个Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.GetImagesEnded">
+            <summary>
+            获取图片完成，所有Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.MessageShown">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.Class.DetectionFlow.ProgressChanged">
+            <summary>
+            检测进度变化
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.DetectionCompletedArgs">
+            <summary>
+            检测完成的事件标志位
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionCompletedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionCompletedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionCompletedArgs.Result">
+            <summary>
+            检测结果
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionCompletedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionCompletedArgs.IsManualMode">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.DetectionStartedArgs">
+            <summary>
+            检测开始的事件参数
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.PanelID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.IsManualMode">
+            <summary>
+            手动拍照模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.DetectionStartedArgs.ImgPath">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.GetImagesEndedArgs">
+            <summary>
+            所有图片获取完成事件的参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesEndedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesEndedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesEndedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesEndedArgs.IsManualMode">
+            <summary>
+            手动拍照模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.GetImagesReadyArgs">
+            <summary>
+            获取图像已就绪事件的参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.PatternIndex">
+            <summary>
+            Pattern序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.PatternName">
+            <summary>
+            Pattern名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesReadyArgs.IsManualMode">
+            <summary>
+            手动拍照模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.GetImagesCompletedArgs">
+            <summary>
+            单个Pattern图片获取完成事件的参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.PatternIndex">
+            <summary>
+            Pattern序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.PatternName">
+            <summary>
+            Pattern名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.GetImagesCompletedArgs.IsManualMode">
+            <summary>
+            手动拍照模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.ImageReceivedArgs">
+            <summary>
+            图像生成事件类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.PatternIndex">
+            <summary>
+            Pattern序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.PatternName">
+            <summary>
+            Pattern名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.ImageData">
+            <summary>
+            图片数据
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ImageReceivedArgs.IsManualMode">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.ProgressChangedArgs">
+            <summary>
+            检测进度变化事件的参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ProgressChangedArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ProgressChangedArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ProgressChangedArgs.Percent">
+            <summary>
+            百分比 0.0 ~ 1.0
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ProgressChangedArgs.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ProgressChangedArgs.IsManualMode">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Events.ShowMessageArgs">
+            <summary>
+            消息显示事件参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ShowMessageArgs.Text">
+            <summary>
+            文本信息
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Events.ShowMessageArgs.IsError">
+            <summary>
+            是否为异常信息
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.ISignalProvider">
+            <summary>
+            信号提供者
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.ISignalProvider.GetImagesReady(HYC.StandardAoi.Parameter.DetectionType,System.Int32,System.Int32)">
+            <summary>
+            已准备好获取图片，用于外观检等需要外部配合的情况
+            </summary>
+            <param name="type">检测类型</param>
+            <param name="channel">检测通道</param>
+            <param name="patternIndex">画面序号，从0开始</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.ISignalProvider.GetImagesCompleted(HYC.StandardAoi.Parameter.DetectionType,System.Int32,System.Int32)">
+            <summary>
+            单个Pattern的图像获取完成
+            </summary>
+            <param name="type">检测类型</param>
+            <param name="channel">检测通道</param>
+            <param name="patternIndex">画面序号，从0开始</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.ISignalProvider.GetImagesEnded(HYC.StandardAoi.Parameter.DetectionType,System.Int32)">
+            <summary>
+            所有图像获取完成
+            </summary>
+            <param name="type">检测类型</param>
+            <param name="channel">检测通道</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.ISignalProvider.DetectionCompleted(HYC.StandardAoi.Parameter.DetectionType,System.Int32,HYC.StandardAoi.Parameter.ResultType)">
+            <summary>
+            检测完成
+            </summary>
+            <param name="type">检测类型</param>
+            <param name="channel">检测通道</param>
+            <param name="result">结果</param>
+        </member>
+        <member name="E:HYC.StandardAoi.Interface.ISignalProvider.DetectionRequest">
+            <summary>
+            开始检测请求
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.RequestEventArgs">
+            <summary>
+            信号请求参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.PanelID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.TesterIndex">
+            <summary>
+            检测工位的PG不固定时，使用该参数传入序号，序号为传入的IPatternProducer数组的索引
+            <para>默认值为-1，表示使用界面配置的检查机序号</para>
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.PowerIndex">
+            <summary>
+            检测工位的光源（背光）不固定时，使用该参数传入序号，序号为传入的IPowerController数组的索引
+            <para>默认值为-1，表示使用界面配置的光源序号</para>
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.Timeout">
+            <summary>
+            拍照完成后，等待算法检测结果的检测超时时间
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.RequestEventArgs.AssociatedInfo">
+            <summary>
+            关联Group的请求信息，在界面上设置了关联group时有效
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.AssociatedRequestInfo">
+            <summary>
+            关联Group的请求信息
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.AssociatedRequestInfo.PanelID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.AssociatedRequestInfo.TesterIndex">
+            <summary>
+            检测工位的PG不固定时，使用该参数传入序号，序号为传入的IPatternProducer数组的索引
+            <para>默认值为-1，表示使用界面配置的检查机序号</para>
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.AssociatedRequestInfo.PowerIndex">
+            <summary>
+            检测工位的光源（背光）不固定时，使用该参数传入序号，序号为传入的IPowerController数组的索引
+            <para>默认值为-1，表示使用界面配置的光源序号</para>
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Interface.AssociatedRequestInfo.Timeout">
+            <summary>
+            拍照完成后，等待算法检测结果的检测超时时间
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.IImageProducer">
+            <summary>
+            图像数据生产者
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <param name="pattName">画面名称</param>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.IPatternProducer">
+            <summary>
+            检测画面生产者
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPatternProducer.PowerOn">
+            <summary>
+            开电
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPatternProducer.PowerOff">
+            <summary>
+            关电
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPatternProducer.CreatePattern(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据RGB显示画面
+            </summary> 
+            <param name="r">画面红色分量</param>
+            <param name="g">画面绿色分量</param>
+            <param name="b">画面蓝色分量</param>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPatternProducer.CreatePattern(System.Int32)">
+            <summary>
+            根据索引显示画面
+            </summary>
+            <param name="patternIndex">画面索引</param>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPatternProducer.CreatePattern(System.String)">
+            <summary>
+            根据画面名称显示画面
+            </summary>
+            <param name="patternName">画面名称</param>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Interface.IPowerController">
+            <summary>
+            光源控制器
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPowerController.PowerOnSide">
+            <summary>
+            打开侧光源
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPowerController.PowerOffSide">
+            <summary>
+            关闭侧光源
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPowerController.PowerOnBack">
+            <summary>
+            打开背光源
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Interface.IPowerController.PowerOffBack">
+            <summary>
+            关闭背光源
+            </summary>
+            <returns>true:成功;false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.AlgorithmType">
+            <summary>
+            算法类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.AlgorithmType.V1_04_INT">
+            <summary>
+            4组参数，INT型参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.AlgorithmType.V2_04_FLOAT">
+            <summary>
+            4组参数，Float型参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.AlgorithmType.V3_10_PTN20">
+            <summary>
+            10组参数，20个画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.AlgorithmType.V4_10_PTN50">
+            <summary>
+            10组参数，50个画面
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.CommonFunc">
+            <summary>
+            公用方法
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.CommonFunc.GetNgText(System.Int32,HYC.StandardAoi.Recipes.Recipe,HYC.StandardAoi.Algorithm.DetectionAlgorithm)">
+            <summary>
+            获取NgCode对应的NgText
+            </summary>
+            <param name="nNgCode">NG Code</param>
+            <param name="recipe">机种</param>
+            <param name="algorithm">算法</param>
+            <returns>NgText</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ModelPatternChangeInfo">
+            <summary>
+            算法参数的变更信息
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ModelPatternChangeInfo.PatternName">
+            <summary>
+            画面名
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ModelPatternChangeInfo.ListChanges">
+            <summary>
+            变更信息集合
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ModelPatternChangeInfo.ToString">
+            <summary>
+            转换为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ChangeInfoDetail">
+            <summary>
+            算法参数的变更信息-明细
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ChangeInfoDetail.ChangeType">
+            <summary>
+            更改参数类型 0-9
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ChangeInfoDetail.ListNames">
+            <summary>
+            参数名
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ChangeInfoDetail.ListOldValues">
+            <summary>
+            旧值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ChangeInfoDetail.ListNewValues">
+            <summary>
+            新值
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ChangeInfoDetail.Add(System.String,System.Single,System.Single)">
+            <summary>
+            添加
+            </summary>
+            <param name="strName">参数名</param>
+            <param name="oldVal">旧值</param>
+            <param name="curVal">新值</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.PatternControlMode">
+            <summary>
+            画面控制模式
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternControlMode.ChangePattern">
+            <summary>
+            切画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternControlMode.PowerOn">
+            <summary>
+            开电
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternControlMode.PowerOnAndChangePattern">
+            <summary>
+            开电+切画面
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternControlMode.PowerOff">
+            <summary>
+            关电
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternControlMode.None">
+            <summary>
+            不控制
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.PatternSyncManager">
+            <summary>
+            两个检测使用同一个检查机的画面同步管理类
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.master">
+            <summary>
+            主检测管理对象
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.slave">
+            <summary>
+            从检测管理对象
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.masterChannel">
+            <summary>
+            Master关注的channel
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.slaveChannel">
+            <summary>
+            Slave关注的channel
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.mode">
+            <summary>
+            检查机画面切换模式
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternSyncManager.lstHandlers">
+            <summary>
+            全部需要同步的Pattern
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.#ctor(HYC.StandardAoi.StandardAoiManager,System.Int32,HYC.StandardAoi.StandardAoiManager,System.Int32,HYC.StandardAoi.Parameter.PatternChangeMode)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="master">主检测管理对象</param>
+            <param name="masterChannel">关注的channel</param>
+            <param name="slave">从检测管理对象</param>
+            <param name="slaveChannel">关注的channel</param>
+            <param name="mode">检查机画面切换模式</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.GetHandler(System.Int32,HYC.StandardAoi.Recipes.RecipeData)">
+            <summary>
+            获取指定的Handler
+            </summary>
+            <param name="i">PatternIndex</param>
+            <param name="data">机种数据类</param>
+            <returns>同步类</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.Master_GetImagesReady(System.Object,HYC.StandardAoi.Events.GetImagesReadyArgs)">
+            <summary>
+            主检测线程切换检查机画面完成
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.Master_GetImagesCompleted(System.Object,HYC.StandardAoi.Events.GetImagesCompletedArgs)">
+            <summary>
+            主检测线程拍照完成，等待从检测线程拍照完成的信号
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.Slave_GetImagesReady(System.Object,HYC.StandardAoi.Events.GetImagesReadyArgs)">
+            <summary>
+            从检测线程等待主检测线程的检查机画面切换完成的信号
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.PatternSyncManager.Slave_GetImagesCompleted(System.Object,HYC.StandardAoi.Events.GetImagesCompletedArgs)">
+            <summary>
+            从检测线程拍照完成，通知主检测线程可以切换下一个画面
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.PatternSyncHandler">
+            <summary>
+            单个Pattern的同步处理类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.StepIndex">
+            <summary>
+            Pattern对应的检查机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.PictName">
+            <summary>
+            Pattern对应的检查机的画面名
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.R">
+            <summary>
+            Pattern对应的R分量
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.G">
+            <summary>
+            Pattern对应的G分量
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.B">
+            <summary>
+            Pattern对应的B分量
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.MrePattReady">
+            <summary>
+            Pattern切换完成事件
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.PatternSyncHandler.MreGrab">
+            <summary>
+            拍照完成事件
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultAnalysis">
+            <summary>
+            AOI/Mura类型的结果分析
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultAnalysis.ThreSameDefectError">
+            <summary>
+            同一画面同一位置检测到不良的阈值，对应GetSameDefectError()
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultAnalysis.ThreSameNgTextError">
+            <summary>
+            相同NgText的阈值，对应GetSameNgTextError()
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultAnalysis.ThreContinousNgError">
+            <summary>
+            连续NG的阈值，对应GetContinousNgError()
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.Add(HYC.StandardAoi.Parameter.ResultDetail)">
+            <summary>
+            添加检测结果
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.Clear">
+            <summary>
+            清除检测结果
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.GetSameDefectError">
+            <summary>
+            连续n次在同一画面同一位置检测到同一类不良
+            </summary>
+            <returns>不良结果</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.GetArea(System.Collections.Generic.List{HYC.StandardAoi.Parameter.ResultDetail},System.String,System.Int32)">
+            <summary>
+            获取所有结果中指定画面指定不良的重合区域
+            </summary>
+            <param name="lstResult">检测结果集合</param>
+            <param name="patternName">画面名</param>
+            <param name="defectCode">不良代码</param>
+            <returns>重合区域</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.GetIntersectAreas(System.Collections.Generic.List{HYC.StandardAoi.Parameter.DefectArea},System.Collections.Generic.List{HYC.StandardAoi.Parameter.DefectArea})">
+            <summary>
+            获取两个区域所有可能的交集
+            </summary>
+            <param name="lstArea1"></param>
+            <param name="lstArea2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.GetSameNgTextError">
+            <summary>
+            连续n次判定为同一个NgText
+            </summary>
+            <returns>不良结果</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysis.GetContinousNgError">
+            <summary>
+            连续n次NG
+            </summary>
+            <returns>是否为连续不良</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultAnalysisSimple">
+            <summary>
+            简单的只有OK/NG的结果分析
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultAnalysisSimple.ThreContinousNgError">
+            <summary>
+            结果分析数量阈值
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysisSimple.Add(System.Boolean)">
+            <summary>
+            添加结果
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysisSimple.Clear">
+            <summary>
+            清除结果
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultAnalysisSimple.GetContinousNgError">
+            <summary>
+            连续n次NG
+            </summary>
+            <returns>是否为连续不良</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.SameDefectError">
+            <summary>
+            同一画面同一位置检测到同一类不良的异常描述类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.SameDefectError.IsError">
+            <summary>
+            是否异常
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.SameDefectError.ImgROI">
+            <summary>
+            ROI区域
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.SameDefectError.ListPattern">
+            <summary>
+            异常画面
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.SameDefectError.ToString">
+            <summary>
+            转换为文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.SameNgTextError">
+            <summary>
+            相同NgText的异常描述类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.SameNgTextError.IsError">
+            <summary>
+            是否异常
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.SameNgTextError.NgText">
+            <summary>
+            不良代码文本
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultConverterNew">
+            <summary>
+            算法输出结果转换类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverterNew.Algorithm">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverterNew.CurRecipe">
+            <summary>
+            当前机种
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverterNew.WriteLog">
+            <summary>
+            写日志
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertToDetectionResult(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.DetectionResult,System.Int32)">
+            <summary>
+            将算法输出的数据，转换成检测结果类DetectionResult
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detection">检测结果类</param>
+            <param name="channel">算法通道</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertToResultDetail(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32)">
+            <summary>
+            将算法输出的数据，转换成结果统计类ResultDetail
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="channel">算法通道</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.CalcCount(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[])">
+            <summary>
+            计算不良数量
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertDisplay(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-显示异常
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertDot(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Dot
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertLine(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Line
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertMura(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Mura
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertMura2(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Mura2
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve1(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve1
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve2(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve2
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve3(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve3
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve4(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve4
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve5(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve5
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertReserve6(HYC.StandardAoi.Algorithm.DEFECT_STATISTICSNew[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Reserve6
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.AddDefectReason(HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.String,HYC.StandardAoi.Parameter.DefectReason,System.Int32)">
+            <summary>
+            向ResultDetail中添加DefectReason
+            </summary>
+            <param name="detail">详细检测结果类</param>
+            <param name="pattIndex">Pattern序号</param>
+            <param name="pattName">Pattern名称</param>
+            <param name="reason">不良原因</param>
+            <param name="ngCode">不良代码</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverterNew.ConvertDetailToSummary(HYC.StandardAoi.Parameter.DetectionResult)">
+            <summary>
+            将ResultDetail转换为ResultSummary
+            </summary>
+            <param name="detection">检测结果类</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DetectionPara">
+            <summary>
+            检测参数类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.ImageProducers">
+            <summary>
+            图像生产者
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.PatternProducer">
+            <summary>
+            检测画面生产者
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.PowerController">
+            <summary>
+            光源控制器
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.Channel">
+            <summary>
+            算法通道
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.PanelID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.ImageSavePath">
+            <summary>
+            图片保存路径
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.ImageSaveFormat">
+            <summary>
+            图片保存格式 0-bmp 1-png 2-jpg
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.DetectionPara.ProcessedImageSaveMode">
+            <summary>
+            算法处理图保存逻辑 0-不保存 1-保存全部画面 2-保存检出画面
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.IsImageTestMode">
+            <summary>
+            图片检测模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.IsManualMode">
+            <summary>
+            手动拍照模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.IsAlgorithmShield">
+            <summary>
+            是否算法屏蔽
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.IsTurnOffTesterWhenCompleted">
+            <summary>
+            检测结束后关闭检查机
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.IsTurnOffPowerWhenCompleted">
+            <summary>
+            检测结束后关闭光源
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.PatternChangeMode">
+            <summary>
+            检查机画面切换模式
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionPara.Timeout">
+            <summary>
+            拍照完成后，等待算法检测结果的检测超时时间
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DetectionResult">
+            <summary>
+            检测流程结果
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.Detail">
+            <summary>
+            详细检测结果
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.Summary">
+            <summary>
+            用于显示的结果一览
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.OriginalImages">
+            <summary>
+            原始图
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.ProcessedImages">
+            <summary>
+            处理图
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.IsNormallyCompleted">
+            <summary>
+            检测是否正常结束
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DetectionResult.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DetectionResult.ToString">
+            <summary>
+            转换成字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.DetectionType.Aoi">
+            <summary>
+            AOI检测
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.DetectionType.Mura">
+            <summary>
+            Mura检测
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.DetectionType.Line">
+            <summary>
+            外观检
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ImageData">
+            <summary>
+            图像数据封装
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ImageData.ImageBytes">
+            <summary>
+            图像字节数组
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ImageData.Width">
+            <summary>
+            图像的Width
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ImageData.Height">
+            <summary>
+            图像的Height
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ImageData.ToBitmap">
+            <summary>
+            将字节数组转换为Bitmap对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ImageData.FromBitmap(System.Drawing.Bitmap,System.Boolean)">
+            <summary>
+            将Bitmap对象转换为字节数组
+            </summary>
+            <param name="bitmap">图片</param>
+            <param name="isColor">彩色图</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ConstVal">
+            <summary>
+            常量定义
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.LcdFileType">
+            <summary>
+            模组参数文件名后缀
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.ModuleFileType">
+            <summary>
+            判定基准文件名后缀
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.ModelFileType">
+            <summary>
+            算法参数文件名后缀
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.ModelFileType2">
+            <summary>
+            算法参数文件名后缀（旧）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.LcdShieldType">
+            <summary>
+            屏蔽参数文件名后缀
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DisplayNameCode">
+            <summary>
+            显示异常不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode0">
+            <summary>
+            点不良Code-0
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode1">
+            <summary>
+            点不良Code-1
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode2">
+            <summary>
+            点不良Code-2
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode3">
+            <summary>
+            点不良Code-3
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode4">
+            <summary>
+            点不良Code-4
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode5">
+            <summary>
+            点不良Code-5
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.DotNameCode6">
+            <summary>
+            点不良Code-6
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.LineNameCode">
+            <summary>
+            线不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.MuraNameCode">
+            <summary>
+            斑不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.MuraNameCode2">
+            <summary>
+            斑（其他）不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve1NameCode">
+            <summary>
+            Reserve1不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve2NameCode">
+            <summary>
+            Reserve2不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve3NameCode">
+            <summary>
+            Reserve3不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve4NameCode">
+            <summary>
+            Reserve4不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve5NameCode">
+            <summary>
+            Reserve5不良Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ConstVal.Reserve6NameCode">
+            <summary>
+            Reserve6不良Code
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultDetail">
+            <summary>
+            详细检测结果
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.PanelID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.StartTime">
+            <summary>
+            检测开始时间
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.EndTime">
+            <summary>
+            检测结束时间
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.RecipeID">
+            <summary>
+            机种ID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.ImgPath">
+            <summary>
+            图片保存路径
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.TestResult">
+            <summary>
+            检测结果 OK/NG
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.MainDefectCode">
+            <summary>
+            不良Code 1-显示异常 20-亮点 21-暗点 3-线 4-斑 5-斑（其他）
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.NgCode">
+            <summary>
+            不良Code，与NgText对应
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.NgText">
+            <summary>
+            不良代码 ‘SK’/‘H1’/‘DG’....
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.Reserve">
+            <summary>
+            预留
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.ImgROI">
+            <summary>
+            ROI区域
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultDetail.ListPattern">
+            <summary>
+            不良Pattern列表
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetTotalDefectCount">
+            <summary>
+            获取全部不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetXsycDefectCount">
+            <summary>
+            获取显示异常不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetBirghtDotDefectCount">
+            <summary>
+            获取亮点不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetDarkDotDefectCount">
+            <summary>
+            获取暗点不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetLineDefectCount">
+            <summary>
+            获取线不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetMuraDefectCount">
+            <summary>
+            获取斑不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetMura2DefectCount">
+            <summary>
+            获取斑（其他）不良的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.GetReserveDefectCount(System.Int32)">
+            <summary>
+            获取Reserve不良的数量
+            </summary>
+            <param name="index">备用类型序号(0-5)</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultDetail.ToString">
+            <summary>
+            结果类转换成文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DefectPattern">
+            <summary>
+            不良画面，包含多个不良原因
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectPattern.PatternIndex">
+            <summary>
+            画面序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectPattern.PatternName">
+            <summary>
+            画面名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectPattern.NgCode">
+            <summary>
+            不良Code，与NgText对应
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectPattern.NgText">
+            <summary>
+            不良代码 ‘SK’/‘H1’/‘DG’....
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectPattern.ListReason">
+            <summary>
+            不良原因的列表
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DefectReason">
+            <summary>
+            不良原因，包含多个不良区域
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectReason.DefectCode">
+            <summary>
+            不良Code 1-显示异常 20-亮点 21-暗点 3-线 4-斑 5-斑（其他）
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectReason.DefectCount">
+            <summary>
+            不良数量
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectReason.DefectAreas">
+            <summary>
+            不良区域列表
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectReason.OtherDefectInfo">
+            <summary>
+            检测的参数值
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectReason.OtherDefectName">
+            <summary>
+            检测的参数名称
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.DefectArea">
+            <summary>
+            不良区域
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectArea.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectArea.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectArea.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.DefectArea.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DefectArea.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DefectArea.#ctor(System.Int32[],System.Int32)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="vals"></param>
+            <param name="start"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DefectArea.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="strArea">以逗号分隔的区域(x,y,w,h)</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DefectArea.Intersect(HYC.StandardAoi.Parameter.DefectArea,HYC.StandardAoi.Parameter.DefectArea)">
+            <summary>
+            不良区域的交集
+            </summary>
+            <param name="a">不良区域a</param>
+            <param name="b">不良区域b</param>
+            <returns>不良区域交集</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.DefectArea.ToString">
+            <summary>
+            转换为文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.PatternChangeMode">
+            <summary>
+            画面切换模式
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternChangeMode.PattIndex">
+            <summary>
+            Pattern序号切换模式
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternChangeMode.RGB">
+            <summary>
+            RGB切换模式
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.PatternChangeMode.PictName">
+            <summary>
+            Pattern名称切换模式
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultConverter">
+            <summary>
+            算法输出结果转换类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverter.Algorithm">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverter.CurRecipe">
+            <summary>
+            当前机种
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultConverter.WriteLog">
+            <summary>
+            写日志
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertToDetectionResult(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.DetectionResult,System.Int32)">
+            <summary>
+            将算法输出的数据，转换成检测结果类DetectionResult
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detection">检测结果类</param>
+            <param name="channel">算法通道</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertToResultDetail(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32)">
+            <summary>
+            将算法输出的数据，转换成结果统计类ResultDetail
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="channel">算法通道</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.CalcCount(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[])">
+            <summary>
+            计算不良数量
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertDisplay(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-显示异常
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertDot(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Dot
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertLine(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Line
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertMura(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Mura
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertMura2(HYC.StandardAoi.Algorithm.DEFECT_STATISTICS[],HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.Int32)">
+            <summary>
+            数据转换-Mura2
+            </summary>
+            <param name="ptnDefect">全部Pattern的检测结果</param>
+            <param name="detail">详细检测结果类</param>
+            <param name="nPatternNum">检测的Pattern计数</param>
+            <param name="pattIndex">所有的Pattern计数</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.AddDefectReason(HYC.StandardAoi.Parameter.ResultDetail,System.Int32,System.String,HYC.StandardAoi.Parameter.DefectReason,System.Int32)">
+            <summary>
+            向ResultDetail中添加DefectReason
+            </summary>
+            <param name="detail">详细检测结果类</param>
+            <param name="pattIndex">Pattern序号</param>
+            <param name="pattName">Pattern名称</param>
+            <param name="reason">不良原因</param>
+            <param name="ngCode">不良代码</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultConverter.ConvertDetailToSummary(HYC.StandardAoi.Parameter.DetectionResult)">
+            <summary>
+            将ResultDetail转换为ResultSummary
+            </summary>
+            <param name="detection">检测结果类</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultSummary">
+            <summary>
+            用于显示的结果一览
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultSummary.Results">
+            <summary>
+            结果集合
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Parameter.ResultSummary.ToString">
+            <summary>
+            结果类转换成文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultRow">
+            <summary>
+            用于显示的结果行
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultRow.Index">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultRow.PatternName">
+            <summary>
+            画面名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Parameter.ResultRow.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Parameter.ResultType">
+            <summary>
+            检测结果类型
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.NG">
+            <summary>
+            NG
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.OK">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.Skip">
+            <summary>
+            Skip
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.Xsyc">
+            <summary>
+            显示异常
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.MtpNg">
+            <summary>
+            MtpNg
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.Gray">
+            <summary>
+            Gray
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Parameter.ResultType.NULL">
+            <summary>
+            无结果
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.StandardAoiManager">
+            <summary>
+            算法检测管理类
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.StandardAoiManager.recipeManager">
+            <summary>
+            机种管理类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.StandardAoiManager.DetectionType">
+            <summary>
+            检测类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.StandardAoiManager.AlgorithmType">
+            <summary>
+            算法类型
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.StandardAoiManager.Algorithm">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.StandardAoiManager.CurRecipe">
+            <summary>
+            当前机种
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.GetRecipes">
+            <summary>
+            获取所有机种
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.Init(System.String,HYC.StandardAoi.Parameter.DetectionType)">
+            <summary>
+            初始化参数
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="detectionType">检测类型</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.UpdateModuleInfo(HYC.StandardAoi.Recipes.Recipe,HYC.StandardAoi.Algorithm.DetectionAlgorithm)">
+            <summary>
+            更新参数给算法
+            </summary>
+            <param name="recipe">机种</param>
+            <param name="algorithm">检测算法</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.UpdateModuleInfo">
+            <summary>
+            更新当前的参数给算法
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.CreateNewRecipe(System.String)">
+            <summary>
+            创建新机种
+            </summary>
+            <param name="recipeID">机种名</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.CreateNewRecipeFrom(System.String,System.String)">
+            <summary>
+            从旧机种创建新机种
+            </summary>
+            <param name="recipeIDOld">旧机种名</param>
+            <param name="recipeIDNew">新机种名</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.FileCopy(System.String,System.String)">
+            <summary>
+            机种相关文件的复制
+            </summary>
+            <param name="srcPath"></param>
+            <param name="dstPath"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.DeleteRecipe(System.String)">
+            <summary>
+            删除机种
+            </summary>
+            <param name="recipeID">机种名</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.GetPatternNames">
+            <summary>
+            获取Pattern名称集合
+            </summary>
+            <returns>Pattern名称集合</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.GetAlgParaType(System.Int32,System.Int32)">
+            <summary>
+            动态参数模式下，获取Pattern使用的参数名
+            </summary>
+            <param name="channel"></param>
+            <param name="patternIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.GrayTest(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Byte[]@,System.Int32[]@,System.Double@)">
+            <summary>
+            图片灰度及ROI检测
+            </summary>
+            <param name="dataIn">图像数据</param>
+            <param name="h">图像的height</param>
+            <param name="w">图像的width</param>
+            <param name="isBlack">是否为黑画面</param>
+            <param name="dataOut">输出图像</param>
+            <param name="aoi">产品点亮区域</param>
+            <param name="gray">灰阶值</param>
+        </member>
+        <member name="M:HYC.StandardAoi.StandardAoiManager.StartDetectionAsync(HYC.StandardAoi.Parameter.DetectionPara)">
+            <summary>
+            创建检测流程
+            </summary>
+            <param name="para">检测参数</param>
+            <returns>检测结果</returns>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.DetectionStarted">
+            <summary>
+            检测开始事件
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.DetectionCompleted">
+            <summary>
+            检测完成事件
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.ImageReceived">
+            <summary>
+            接收到图像数据
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.GetImagesReady">
+            <summary>
+            获取图片已就绪，单个Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.GetImagesCompleted">
+            <summary>
+            获取图片完成，单个Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.GetImagesEnded">
+            <summary>
+            获取图片完成，所有Pattern
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.MessageShown">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="E:HYC.StandardAoi.StandardAoiManager.ProgressChanged">
+            <summary>
+            检测进度变化
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Recipes.Recipe">
+            <summary>
+            机种类
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.RecipeID">
+            <summary>
+            机种名称
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.PPID">
+            <summary>
+            PPID
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.Location">
+            <summary>
+            Recipe文件夹路径
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.UpdateTime">
+            <summary>
+            机种更新时间
+            </summary>
+        </member>
+        <member name="P:HYC.StandardAoi.Recipes.Recipe.Data">
+            <summary>
+            机种数据
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.LoadAlgorithmData">
+            <summary>
+            加载机种数据
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.SaveLcdInfo">
+            <summary>
+            保存模组参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.SaveModuleInfo">
+            <summary>
+            保存判定基准
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.SaveModelInfo">
+            <summary>
+            保存算法参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.SaveShieldInfo">
+            <summary>
+            保存屏蔽参数
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.LoadSettings">
+            <summary>
+            加载设置（曝光时间、画面稳定时间、检查机画面序号与RGB等）
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.Recipe.SaveSettings">
+            <summary>
+            保存设置（曝光时间、画面稳定时间、检查机画面序号与RGB等）
+            </summary>
+        </member>
+        <member name="T:HYC.StandardAoi.Recipes.RecipeData">
+            <summary>
+            机种数据类
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.MaxChannel">
+            <summary>
+            最大4个通道的数据
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.maxPatternCount">
+            <summary>
+            最大画面数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.ModelInfo4">
+            <summary>
+            算法参数（用于xml格式保存）
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.ModuleInfo">
+            <summary>
+            判定基准
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.LcdInfo">
+            <summary>
+            模组参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.ShieldInfo">
+            <summary>
+            屏蔽参数
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.ExposureTime">
+            <summary>
+            曝光时间
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.Gain">
+            <summary>
+            增益
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.GammaEnable">
+            <summary>
+            是否启用Gamma
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.Gamma">
+            <summary>
+            Gamma值
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.PhotoWaitTime">
+            <summary>
+            画面稳定时间
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.PatternControl">
+            <summary>
+            检查机画面控制
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.StepList">
+            <summary>
+            Pattern与检查机画面序号的对应关系
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.PictNameList">
+            <summary>
+            Pattern对应的检查机的画面名列表
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.RList">
+            <summary>
+            RGB方式切换画面时的R分量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.GList">
+            <summary>
+            RGB方式切换画面时的G分量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.BList">
+            <summary>
+            RGB方式切换画面时的B分量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.SaveImage">
+            <summary>
+            Pattern图片是否保存
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.PowerOnSide">
+            <summary>
+            侧光源是否打开
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.PowerOnBack">
+            <summary>
+            背光源是否打开
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.NgCodeDataSet">
+            <summary>
+            NG Code
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeData.NgCodeOldMode">
+            <summary>
+            旧版本的NG Code模式
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.ReadData(System.String,System.String)">
+            <summary>
+            从本地文件加载机种参数
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadParaInfo(System.String,System.String,System.String)">
+            <summary>
+            从文件加载参数
+            </summary>
+            <param name="strFileExt">文件拓展名(.xxx)</param>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.ConvertModel">
+            <summary>
+            将ModelPara4New转换为ModelPara2New
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.ConvertShield(System.Data.DataSet)">
+            <summary>
+            转换屏蔽参数文件
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveLcdInfo(System.String)">
+            <summary>
+            保存模组参数
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveModuleInfo(System.String)">
+            <summary>
+            保存判定基准
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveModelInfo(System.String)">
+            <summary>
+            保存算法参数
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveShieldInfo(System.String)">
+            <summary>
+            保存屏蔽参数
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveParaInfo(System.String,System.String)">
+            <summary>
+            保存参数到文件
+            </summary>
+            <param name="strFileExt">文件拓展名(.xxx)</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveShieldInfoToXml(System.String)">
+            <summary>
+            保存屏蔽参数到xml文件
+            </summary>
+            <param name="strFileName">文件名</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadSettings(System.String,System.String)">
+            <summary>
+            加载设置（曝光时间、画面稳定时间、检查机画面序号与RGB等）
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveSettings(System.String)">
+            <summary>
+            保存设置（曝光时间、画面稳定时间、检查机画面序号与RGB等）
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadExposureTime(System.String,System.String)">
+            <summary>
+            加载曝光时间
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveExposureTime(System.String)">
+            <summary>
+            保存曝光时间
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadPhotoWaitTime(System.String,System.String)">
+            <summary>
+            加载画面稳定时间
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SavePhotoWaitTime(System.String)">
+            <summary>
+            保存画面稳定时间
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadStepList(System.String,System.String)">
+            <summary>
+            加载检查机画面序号
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveStepList(System.String)">
+            <summary>
+            保存检查机画面序号
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadPictNameList(System.String,System.String)">
+            <summary>
+            加载检查机画面名
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SavePictNameList(System.String)">
+            <summary>
+            保存检查机画面名
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadRGBList(System.String,System.String)">
+            <summary>
+            加载画面的RGB
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveRGBList(System.String)">
+            <summary>
+            保存画面的RGB
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadSaveImage(System.String,System.String)">
+            <summary>
+            加载画面图片保存设置
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveSaveImage(System.String)">
+            <summary>
+            保存画面图片保存设置
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadPatternControl(System.String,System.String)">
+            <summary>
+            加载检查机画面控制设置
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SavePatternControl(System.String)">
+            <summary>
+            保存检查机画面控制设置
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadPowerControl(System.String,System.String)">
+            <summary>
+            加载光源控制设置
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SavePowerControl(System.String)">
+            <summary>
+            保存光源控制设置
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.LoadNGCodeList(System.String,System.String)">
+            <summary>
+            加载NGCode
+            </summary>
+            <param name="recipeName">机种名</param>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeData.SaveNGCodeList(System.String)">
+            <summary>
+            保存NGCode
+            </summary>
+            <param name="strLocation">机种路径</param>
+        </member>
+        <member name="T:HYC.StandardAoi.Recipes.RecipeManager">
+            <summary>
+            机种管理类
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeManager.lstRecipe">
+            <summary>
+            机种列表
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeManager.CurRecipe">
+            <summary>
+            当前机种
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeManager.FilePath">
+            <summary>
+            机种文件路径
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Recipes.RecipeManager.IsRecipeSelected">
+            <summary>
+            机种是否已选择
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeManager.LoadRecipeList">
+            <summary>
+            加载机种列表
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeManager.GetRecipes">
+            <summary>
+            获取所有机种
+            </summary>
+            <returns>机种列表</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Recipes.RecipeManager.GetRecipeByName(System.String)">
+            <summary>
+            根据机种名称获取机种
+            </summary>
+            <param name="name">机种名</param>
+            <returns>机种实例</returns>
+        </member>
+    </members>
+</doc>

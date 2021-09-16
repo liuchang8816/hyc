@@ -1,0 +1,7 @@
+D:\Projects\GratingDetection\RasterDetectionMod\Test\bin\Debug\Test.exe.config
+D:\Projects\GratingDetection\RasterDetectionMod\Test\bin\Debug\Test.exe
+D:\Projects\GratingDetection\RasterDetectionMod\Test\bin\Debug\Test.pdb
+D:\Projects\GratingDetection\RasterDetectionMod\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\Projects\GratingDetection\RasterDetectionMod\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Projects\GratingDetection\RasterDetectionMod\Test\obj\Debug\Test.exe
+D:\Projects\GratingDetection\RasterDetectionMod\Test\obj\Debug\Test.pdb

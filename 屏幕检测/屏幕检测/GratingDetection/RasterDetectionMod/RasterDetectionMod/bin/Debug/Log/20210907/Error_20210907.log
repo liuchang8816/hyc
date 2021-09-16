@@ -1,0 +1,25 @@
+﻿[ERROR] 2021-09-07 16:39:16.457 thread:[01] System.DllNotFoundException: 无法加载 DLL“mil.dll”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。
+   在 Matrox.MatroxImagingLibrary.MILRaw.MappAlloc(String ServerDescription, Int64 InitFlag, IntPtr ContextAppIdPtr)
+   在 Matrox.MatroxImagingLibrary.MIL.MappAlloc(String ServerDescription, Int64 InitFlag, IntPtr ContextAppIdPtr)
+   在 HYC.HTCamera.Card.Matrox.MilApplication.InitApplication(List`1 lstInfos, String systemDescriptor)
+   在 RasterDetectionMod.Entities.AoiCamera.Init() 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Entities\AoiCamera.cs:行号 84
+[ERROR] 2021-09-07 16:39:16.567 thread:[01] System.Exception: LoadPowerConfigFailed
+   在 HYC.HTPower.HTPowerFactory.GetPowers()
+   在 HYC.HTPower.HTPowerFactory.CreatePower(String PowerName)
+   在 RasterDetectionMod.Entities.PowerManager.Init() 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Entities\PowerManager.cs:行号 78
+[ERROR] 2021-09-07 16:39:34.359 thread:[01] System.DllNotFoundException: 无法加载 DLL“Camera3D.dll”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。
+   在 RasterDetectionMod.Camera3D.Cam_Search(StringBuilder desc)
+   在 RasterDetectionMod.Camera3D.Search(StringBuilder desc) 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Camera\Camera3D.cs:行号 54
+[ERROR] 2021-09-07 16:39:34.419 thread:[01] System.Exception: LoadPowerConfigFailed
+   在 HYC.HTPower.HTPowerFactory.GetPowers()
+   在 HYC.HTPower.HTPowerFactory.CreatePower(String PowerName)
+   在 RasterDetectionMod.Entities.PowerManager.Init() 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Entities\PowerManager.cs:行号 78
+[ERROR] 2021-09-07 17:41:12.679 thread:[01] System.DllNotFoundException: 无法加载 DLL“mil.dll”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。
+   在 Matrox.MatroxImagingLibrary.MILRaw.MappAlloc(String ServerDescription, Int64 InitFlag, IntPtr ContextAppIdPtr)
+   在 Matrox.MatroxImagingLibrary.MIL.MappAlloc(String ServerDescription, Int64 InitFlag, IntPtr ContextAppIdPtr)
+   在 HYC.HTCamera.Card.Matrox.MilApplication.InitApplication(List`1 lstInfos, String systemDescriptor)
+   在 RasterDetectionMod.Entities.AoiCamera.Init() 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Entities\AoiCamera.cs:行号 84
+[ERROR] 2021-09-07 17:41:12.719 thread:[01] System.Exception: LoadPowerConfigFailed
+   在 HYC.HTPower.HTPowerFactory.GetPowers()
+   在 HYC.HTPower.HTPowerFactory.CreatePower(String PowerName)
+   在 RasterDetectionMod.Entities.PowerManager.Init() 位置 D:\Projects\GratingDetection\RasterDetectionMod\RasterDetectionMod\Entities\PowerManager.cs:行号 78

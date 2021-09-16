@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85D4DB9A-4733-46E2-AC04-3A5EB8E3E947}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RasterDetectionMod</RootNamespace>
+    <AssemblyName>RasterDetectionMod</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HYC.HTCamera.Card, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTCamera.Card.1.0.0.10\lib\net452\HYC.HTCamera.Card.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTCamera.GigE, Version=1.0.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTCamera.GigE.1.0.0.14\lib\net452\HYC.HTCamera.GigE.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTCommunication, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTCommunication.1.0.0.6\lib\net45\HYC.HTCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTDB, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTDB.1.1.0.1\lib\net452\HYC.HTDB.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTFile">
+      <HintPath>..\packages\HYC.HTFile.1.0.0.1\lib\net45\HYC.HTFile.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTImage, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTImage.1.0.0.3\lib\net45\HYC.HTImage.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTLog, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTLog.1.0.0.7\lib\net45\HYC.HTLog.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTPatternGenerator, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HYC.HTPatternGenerator.1.0.0.6\lib\net45\HYC.HTPatternGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTPLC">
+      <HintPath>..\packages\HYC.HTPLC.1.0.0.3\lib\net452\HYC.HTPLC.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTPower, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HYC.HTPower.1.1.0.4\lib\net45\HYC.HTPower.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.HTTools">
+      <HintPath>..\packages\HYC.HTTools.1.0.0.2\lib\net452\HYC.HTTools.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.StandardAoi, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\HYC.StandardAoi.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.StandardAoi.Extentions, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\HYC.StandardAoi.Extentions.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.StandardAoi.UI, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\HYC.StandardAoi.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="HYC.WindowsForms">
+      <HintPath>..\packages\HYC.WindowsForms.1.0.0.8\lib\net45\HYC.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.9\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ConfigurationHelper.cs" />
+    <Compile Include="Classes\DefectList3D.cs" />
+    <Compile Include="Classes\WorkFlow.cs" />
+    <Compile Include="Classes\WorkFlow3DLayer.cs" />
+    <Compile Include="Classes\WorkFlow3DRaster.cs" />
+    <Compile Include="Controls\ImageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageBox.designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCParaSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCParaSet.Designer.cs">
+      <DependentUpon>UCParaSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcPower.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcPower.designer.cs">
+      <DependentUpon>UcPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\TestRegionCollection.cs" />
+    <Compile Include="Controls\ZoomablePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZoomablePictureBox.designer.cs">
+      <DependentUpon>ZoomablePictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Bitmap_Set.cs" />
+    <Compile Include="Entities\SoftRunParamaters.cs" />
+    <Compile Include="Entities\Work3DLayer_Set.cs" />
+    <Compile Include="Extentions\ImageProducer.cs" />
+    <Compile Include="Extentions\PowerController2.cs" />
+    <Compile Include="Forms\FormRiDong_Set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRiDong_Set.Designer.cs">
+      <DependentUpon>FormRiDong_Set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBitMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBitMap.Designer.cs">
+      <DependentUpon>FormBitMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIndexImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIndexImage.Designer.cs">
+      <DependentUpon>FormIndexImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSESet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSESet.Designer.cs">
+      <DependentUpon>FormSESet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewOtherSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewOtherSet.Designer.cs">
+      <DependentUpon>ViewOtherSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRecipePara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRecipePara.Designer.cs">
+      <DependentUpon>FormRecipePara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVommaCameraSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVommaCameraSetting.Designer.cs">
+      <DependentUpon>FormVommaCameraSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Camera\Camera3D.cs" />
+    <Compile Include="Camera\Camera2D.cs" />
+    <Compile Include="Camera\Cam2DGold.cs" />
+    <Compile Include="Camera\Cam3DGold.cs" />
+    <Compile Include="Camera\Cam3Dlayered.cs" />
+    <Compile Include="Camera\Cam3DRaster.cs" />
+    <Compile Include="Controls\UcMilCamera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcMilCamera.Designer.cs">
+      <DependentUpon>UcMilCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AoiCamera.cs" />
+    <Compile Include="Entities\PlcAddr.cs" />
+    <Compile Include="Entities\PlcData.cs" />
+    <Compile Include="Entities\PlcManager.cs" />
+    <Compile Include="Entities\PlcSignals.cs" />
+    <Compile Include="Entities\PowerManager.cs" />
+    <Compile Include="Extentions\PatternProducer.cs" />
+    <Compile Include="Extentions\PowerController.cs" />
+    <Compile Include="Extentions\SignalProvider.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Models\RasterResultModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipes\LayerAlgorithmPara.cs" />
+    <Compile Include="Recipes\RasterJudgePara.cs" />
+    <Compile Include="Recipes\RecipeManager.cs" />
+    <Compile Include="Controls\UcDetectionGroupEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcDetectionGroupEx.designer.cs">
+      <DependentUpon>UcDetectionGroupEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewCheck.designer.cs">
+      <DependentUpon>ViewCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewMain.Designer.cs">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\ImageBox.resx">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCParaSet.resx">
+      <DependentUpon>UCParaSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcPower.resx">
+      <DependentUpon>UcPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBitMap.resx">
+      <DependentUpon>FormBitMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIndexImage.resx">
+      <DependentUpon>FormIndexImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRiDong_Set.resx">
+      <DependentUpon>FormRiDong_Set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSESet.resx">
+      <DependentUpon>FormSESet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewOtherSet.resx">
+      <DependentUpon>ViewOtherSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRecipePara.resx">
+      <DependentUpon>FormRecipePara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVommaCameraSetting.resx">
+      <DependentUpon>FormVommaCameraSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcMilCamera.resx">
+      <DependentUpon>UcMilCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Controls\UcDetectionGroupEx.resx">
+      <DependentUpon>UcDetectionGroupEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewCheck.resx">
+      <DependentUpon>ViewCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewMain.resx">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dcfs\47M-4Taps-8bit.dcf" />
+    <None Include="Dcfs\4k.dcf" />
+    <None Include="Dcfs\4kEx.dcf" />
+    <None Include="Dcfs\8k.dcf" />
+    <None Include="Dcfs\8kEx.dcf" />
+    <None Include="Dcfs\123.dcf" />
+    <None Include="Dcfs\VP101_85Mhz_10tap8bit-con.dcf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\3DLayer_Set.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Bitmap_Set.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Power.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Vomma3DCamera.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\AoiCamera.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\PLC.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\LoginPicture.png" />
+    <Content Include="Dlls\ArenaNET_v140.dll" />
+    <Content Include="Dlls\Basler.Pylon.dll" />
+    <Content Include="Dlls\Basler.Pylon.xml" />
+    <Content Include="Dlls\bgapi2_genicam_dotnet.dll" />
+    <Content Include="Dlls\CLIDelegate.dll" />
+    <Content Include="Dlls\IpxIGVDotNETWrapper64.dll" />
+    <Content Include="Dlls\Matrox.MatroxImagingLibrary.dll" />
+    <Content Include="Dlls\MvCameraControl.Net.dll" />
+    <Content Include="Dlls\MvCameraControl.Net.xml" />
+    <Content Include="Dlls\ThridLibray.dll" />
+    <Content Include="dll\AdvantechIO.dll" />
+    <Content Include="dll\CommBase.dll" />
+    <Content Include="dll\CommunicationBase.dll" />
+    <Content Include="dll\H72_Tester.dll" />
+    <Content Include="dll\HX_LAN.dll" />
+    <Content Include="dll\OGI7LibV003.dll" />
+    <Content Include="dll\OGI7NetLibV006.dll" />
+    <Content Include="dll\OGI7NetLibV008.dll" />
+    <Content Include="HTCameraConfiguration.xml" />
+    <Content Include="HTPGConfiguration.xml" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>

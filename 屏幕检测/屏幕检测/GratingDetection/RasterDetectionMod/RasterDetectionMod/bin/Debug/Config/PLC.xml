@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!-- PLC连接信息 -->
+  <Connections>
+    <Connection IP="192.168.3.250" Port="8001"/>
+  </Connections>
+  <!-- PLC地址 -->
+  <Address>
+    <BitReadStart>M16000</BitReadStart>
+    <BitWriteStart>M17000</BitWriteStart>
+
+	 	  
+    <!--
+	<XPositionStart3D>D5000</XPositionStart3D>
+    <YPositionStart3D>D5200</YPositionStart3D>
+    <DefectRegions>D6300</DefectRegions>
+    <CurrentRegion>D6200</CurrentRegion>
+	-->
+
+        <!--日东设备的PLC的地址-->
+	  <XPositionStart3D>D4000</XPositionStart3D>
+	  <YPositionStart3D>D4500</YPositionStart3D>
+	  <DefectRegions>D5000</DefectRegions>
+	  <CurrentRegion>D6200</CurrentRegion>
+
+  </Address>
+</Settings>

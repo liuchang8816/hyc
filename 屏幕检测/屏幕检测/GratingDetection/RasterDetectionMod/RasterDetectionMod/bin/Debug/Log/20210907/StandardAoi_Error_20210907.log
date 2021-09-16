@@ -1,0 +1,6 @@
+﻿[ERROR] 2021-09-07 16:39:16.688 thread:[03] System.Exception: 机种Default不存在！
+   在 HYC.StandardAoi.StandardAoiManager.Init(String recipeName, DetectionType detectionType)
+   在 HYC.StandardAoi.UI.FormStandardAoi.RecipeSelect(String recipeId)
+[ERROR] 2021-09-07 17:41:12.819 thread:[03] System.Exception: 机种Default不存在！
+   在 HYC.StandardAoi.StandardAoiManager.Init(String recipeName, DetectionType detectionType)
+   在 HYC.StandardAoi.UI.FormStandardAoi.RecipeSelect(String recipeId)

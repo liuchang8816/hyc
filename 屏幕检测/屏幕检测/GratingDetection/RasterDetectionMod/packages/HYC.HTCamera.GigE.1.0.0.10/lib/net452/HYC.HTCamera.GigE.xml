@@ -1,0 +1,1724 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTCamera.GigE</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTCamera.GigE.Cameras.HTBaslerCamera">
+            <summary>
+            Balser相机
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetCamera">
+            <summary>
+            是否存在相机
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.BalanceWhiteAuto">
+            <summary>
+            自动白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SoftTrigger">
+            <summary>
+            软触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SaveVideo(System.String,System.Single,System.Int32)">
+            <summary>
+            保存视频文件
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="frameRate">视频帧率</param>
+            <param name="frameCount">总共拍摄的帧数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.UserSetLoad">
+            <summary>
+            从用户设置1加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.UserSetSave">
+            <summary>
+            保存配置到用户设置1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.Dispose">
+            <summary>
+            释放相机连接
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ShowExceptionMsg(System.Exception)">
+            <summary>
+            通过事件，显示异常消息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaslerCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetCamera">
+            <summary>
+            是否存在相机
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetHartTimeout">
+            <summary>
+            设置Heartbeat时间
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.InitalStream">
+            <summary>
+            初始化流
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.mDataStream_NewBufferEvent(System.Object,BGAPI2.Events.NewBufferEventArgs)">
+            <summary>
+            当收到新的数据时
+            </summary>
+            <param name="sender"></param>
+            <param name="mDSEvent"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.BalanceWhiteAuto">
+            <summary>
+            自动白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SoftTrigger">
+            <summary>
+            软触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.UserSetLoad">
+            <summary>
+            从用户设置1加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.UserSetSave">
+            <summary>
+            保存配置到用户设置1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SaveVideo(System.String,System.Single,System.Int32)">
+            <summary>
+            保存视频文件
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="frameRate">视频帧率</param>
+            <param name="frameCount">总共拍摄的帧数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ShowExceptionMsg(System.Exception)">
+            <summary>
+            通过事件，显示异常消息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTBaumerCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.Cameras.HTImperxCamera">
+            <summary>
+            Imperx相机
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.GigE.Cameras.HTImperxCamera.device">
+            <summary>
+            相机对象
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTImperxCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetCamera">
+            <summary>
+            获取指定的相机
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ReceiveImages">
+            <summary>
+            接收图像的线程
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.BalanceWhiteAuto">
+            <summary>
+            白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功 false:失败</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功 false:失败</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ShowExceptionMsg(System.Exception)">
+            <summary>
+            通过事件，显示异常消息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ShowMessage(System.String,System.Boolean)">
+            <summary>
+            显示消息
+            </summary>
+            <param name="text"></param>
+            <param name="isError"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTImperxCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTHikCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTHikCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTHikCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTHikCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetCamera">
+            <summary>
+            是否存在相机
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.BalanceWhiteAuto">
+            <summary>
+            自动白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SoftTrigger">
+            <summary>
+            软触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SaveVideo(System.String,System.Single,System.Int32)">
+            <summary>
+            保存视频文件
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="frameRate">视频帧率</param>
+            <param name="frameCount">总共拍摄的帧数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetFPS(System.Int32)">
+            <summary>
+            获取FPS
+            </summary>
+            <param name="timeToCal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.UserSetLoad">
+            <summary>
+            从用户设置1加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.UserSetSave">
+            <summary>
+            保存配置到用户设置1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.ShowExceptionMsg(System.Exception)">
+            <summary>
+            通过事件，显示异常消息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTHikCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.Cameras.HTOPTCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetCamera">
+            <summary>
+            是否存在相机
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SoftTrigger">
+            <summary>
+            软触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.EnableHeartbeat">
+            <summary>
+            打开心跳功能
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.BalanceWhiteAuto">
+            <summary>
+            自动白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.UserSetLoad">
+            <summary>
+            从用户设置1加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.UserSetSave">
+            <summary>
+            保存配置到用户设置1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SaveVideo(System.String,System.Single,System.Int32)">
+            <summary>
+            保存视频文件
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="frameRate">视频帧率</param>
+            <param name="frameCount">总共拍摄的帧数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ShowExceptionMsg(System.Exception)">
+            <summary>
+            通过事件，显示异常消息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.Cameras.HTOPTCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.TriggerMode">
+            <summary>
+            相机的触发模式
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.GigE.TriggerMode.Software">
+            <summary>
+            软触发
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.GigE.TriggerMode.Hardware">
+            <summary>
+            硬触发
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.GigE.TriggerMode.Continous">
+            <summary>
+            连续采集模式
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.HTCameraConfigItem">
+            <summary>
+            相机配置项
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraConfigItem.Name">
+            <summary>
+            相机类型名称
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraConfigItem.Assembly">
+            <summary>
+            相机类所在的位置，一般为文件名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraConfigItem.ClassName">
+            <summary>
+            包含了完整命名空间信息的相机类的类名
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.HTCameraEventArgs">
+            <summary>
+            相机事件参数类
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraEventArgs.Data">
+            <summary>
+            图像字节数据
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraEventArgs.Width">
+            <summary>
+            图像的Width
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraEventArgs.Height">
+            <summary>
+            图像的Height
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraEventArgs.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraEventArgs.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.HTCameraShowMsgEventArgs">
+            <summary>
+            显示消息的事件参数类
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraShowMsgEventArgs.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraShowMsgEventArgs.Text">
+            <summary>
+            文本信息
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.HTCameraShowMsgEventArgs.IsError">
+            <summary>
+            是否为异常信息
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.HTCameraFactory">
+            <summary>
+            相机工厂类
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.HTCameraFactory.GetCameras">
+            <summary>
+            加载可用的相机类型
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.HTCameraFactory.CreateCamera(System.String)">
+            <summary>
+            反射创建相机实例
+            </summary>
+            <param name="cameraName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTCamera.GigE.IHTCamera">
+            <summary>
+            相机接口类
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.Name">
+            <summary>
+            相机的用户别名
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.MacAddr">
+            <summary>
+            相机的Mac地址
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.SerialNumber">
+            <summary>
+            相机的序列号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.CameraIndex">
+            <summary>
+            相机的序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.IsConnected">
+            <summary>
+            相机的连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.GigE.IHTCamera.IsAutoConnectMode">
+            <summary>
+            自动连接模式，默认使用识别到的第一个相机
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SoftTrigger">
+            <summary>
+            软触发
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetTriggerMode(HYC.HTCamera.GigE.TriggerMode)">
+            <summary>
+            设置触发模式
+            </summary>
+            <param name="mode">触发模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.AcquisitionStart">
+            <summary>
+            开始采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.AcquisitionStop">
+            <summary>
+            停止采集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetExposure(System.Single)">
+            <summary>
+            设置曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetExposure(System.Single@)">
+            <summary>
+            获取曝光
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.BalanceWhiteAuto">
+            <summary>
+            自动白平衡
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置BMP的大小，用于图像裁剪
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetBmpSize(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            获取BMP的大小
+            </summary>
+            <param name="offsetX">X起始坐标</param>
+            <param name="offsetY">Y起始坐标</param>
+            <param name="width">图像的宽</param>
+            <param name="height">图像的高</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetPixelFormat(System.String)">
+            <summary>
+            设置像素格式
+            </summary>
+            <param name="format">像素格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SaveVideo(System.String,System.Single,System.Int32)">
+            <summary>
+            保存视频文件
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="frameRate">视频帧率</param>
+            <param name="frameCount">总共拍摄的帧数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.UserSetLoad">
+            <summary>
+            从用户设置1加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.UserSetSave">
+            <summary>
+            保存配置到用户设置1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.IHTCamera.ImageReceived">
+            <summary>
+            图片回传事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.IHTCamera.ConnectionChanged">
+            <summary>
+            相机连接状态改变
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.GigE.IHTCamera.ShowMsg">
+            <summary>
+            显示消息
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.ExecuteCommand(System.String)">
+            <summary>
+            执行命令
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetBooleanValue(System.String)">
+            <summary>
+            获取bool类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetFloatValue(System.String)">
+            <summary>
+            获取浮点数类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetIntegerValue(System.String)">
+            <summary>
+            获取整形的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetStringValue(System.String)">
+            <summary>
+            获取字符串参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetEnumValueStr(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.GetEnumValueInt(System.String)">
+            <summary>
+            获取枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetBooleanValue(System.String,System.Boolean)">
+            <summary>
+            设置bool型的参数值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetFloatValue(System.String,System.Double)">
+            <summary>
+            设置浮点型类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetIntegerValue(System.String,System.Int64)">
+            <summary>
+            设置整形的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetEnumValue(System.String,System.String)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.SetEnumValue(System.String,System.Int64)">
+            <summary>
+            设置枚举类型的参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.ReadMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            读内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="destination">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+        <member name="M:HYC.HTCamera.GigE.IHTCamera.WriteMemory(System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            写内存数据
+            </summary>
+            <param name="address">地址</param>
+            <param name="source">数据</param>
+            <param name="byteCount">数据长度</param>
+        </member>
+    </members>
+</doc>

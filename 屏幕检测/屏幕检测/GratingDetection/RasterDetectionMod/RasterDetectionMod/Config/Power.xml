@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+
+	<!--SE背光--><!--
+	<Power Type="DLC">
+		<Socket IP="192.168.3.112" Port="10000"></Socket>
+	</Power>-->
+	
+	<!--SE侧光--><!--
+	<Power Type="DLC">
+		<Socket IP="192.168.3.111" Port="10000"></Socket>
+	</Power>-->
+
+	<!--日东光源控制器-->
+	<Power Type="DLC">
+    <Socket IP="192.168.1.35" Port="10000"></Socket>
+  </Power>
+
+
+
+</Settings>

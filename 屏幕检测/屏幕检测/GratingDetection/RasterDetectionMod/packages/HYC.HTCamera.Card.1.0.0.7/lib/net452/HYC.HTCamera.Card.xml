@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTCamera.Card</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilApplication">
+            <summary>
+            Mil应用类，管理所有采集卡和相机
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilApplication.InitApplication(System.Collections.Generic.List{HYC.HTCamera.Card.Matrox.MilCardInfo},System.String)">
+            <summary>
+            初始化MIL应用
+            </summary>
+            <param name="lstInfos">采集卡信息列表</param>
+            <param name="systemDescriptor">板卡类型描述</param>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilApplication.CardCount">
+            <summary>
+            已连接的采集卡数量
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilApplication.CameraCount">
+            <summary>
+            已连接的相机数量
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilApplication.GetCard(System.Int32)">
+            <summary>
+            获取采集卡实例
+            </summary>
+            <param name="index">序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilApplication.GetCamera(System.Int32,System.Int32)">
+            <summary>
+            获取相机实例
+            </summary>
+            <param name="cardIndex">采集卡序号</param>
+            <param name="cameraIndex">相机序号</param>
+            <returns>MilCamera实例</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilApplication.GetCameraPort(System.Int32,System.Int32)">
+            <summary>
+            获取相机串行端口实例
+            </summary>
+            <param name="cardIndex">采集卡序号</param>
+            <param name="cameraIndex">相机序号</param>
+            <returns>MilCameraPort实例</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilApplication.FreeApplication">
+            <summary>
+            释放MIL应用资源
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.Card.Matrox.MilApplication.ImageReceived">
+            <summary>
+            接收到图像数据
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCamera">
+            <summary>
+            Mil相机
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCamera.CardIndex">
+            <summary>
+            采集卡序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCamera.CameraIndex">
+            <summary>
+            相机在采集卡上的序号 0/1
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCamera.deepth">
+            <summary>
+            颜色深度,默认8
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCamera.MbufBayerWhiteBalanceArray">
+            <summary>
+            彩色相机的白平衡bufferID
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCamera.WBCoEf">
+            <summary>
+            彩色相机的白平衡设置值
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCamera.BayerType">
+            <summary>
+            Bayer Pattern Type
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.#ctor">
+            <summary>
+            默认构造方法
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.#ctor(System.Int32,System.Int32)">
+            <summary>
+            指定了颜色深度的构造方法
+            </summary>
+            <param name="deepth">颜色深度 8/16</param>
+            <param name="bufferCount">图像采集buffer数量</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.InitCameraLine(Matrox.MatroxImagingLibrary.MIL_ID,System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化线扫相机
+            </summary>
+            <param name="systemId">采集卡分配的ID</param>
+            <param name="cardIndex">采集卡序号</param>
+            <param name="cameraIndex">相机序号</param>
+            <param name="configPath">相机配置文件路径</param>
+            <returns>初始化结果true/false</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.InitCamera2d(Matrox.MatroxImagingLibrary.MIL_ID,System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化面阵相机
+            </summary>
+            <param name="systemId">采集卡分配的ID</param>
+            <param name="cardIndex">采集卡序号</param>
+            <param name="cameraIndex">相机序号</param>
+            <param name="configPath">相机配置文件路径</param>
+            <returns>初始化结果true/false</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.SetWhiteBalance">
+            <summary>
+            设置白平衡
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.StartMdigProcessLine(System.Int32)">
+            <summary>
+            开始连续采集
+            </summary>
+            <param name="count">线扫描时的图片合成张数</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.StopMdigProcessLine">
+            <summary>
+            停止连续采集
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GrabLine(System.Int32,System.Byte[]@,System.Int32@,System.Int32@,System.Boolean,System.Int32,System.Action)">
+            <summary>
+            线扫相机图像采集，图像由多张拼接合成
+            </summary>
+            <param name="count">合成图像张数</param>
+            <param name="data">输出，图像数组</param>
+            <param name="width">输出，图像宽度</param>
+            <param name="height">输出，图像高度</param>
+            <param name="isSoftTrigger">是否为软触发，软触发true，硬触发false</param>
+            <param name="timeout">采集超时时间</param>
+            <param name="ready">拍照就绪</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GrabLine(System.Int32,System.Collections.Generic.List{System.Byte[]}@,System.Int32@,System.Int32@,System.Boolean,System.Int32,System.Action)">
+            <summary>
+            线扫相机图像采集，图像由多张拼接合成
+            </summary>
+            <param name="count">合成图像张数</param>
+            <param name="lstDatas">输出，图像数据，数量等于count</param>
+            <param name="width">输出，图像宽度</param>
+            <param name="height">输出，单张图像高度</param>
+            <param name="isSoftTrigger">是否为软触发，软触发true，硬触发false</param>
+            <param name="timeout">采集超时时间</param>
+            <param name="ready">拍照就绪</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.StartMdigProcess(System.Boolean)">
+            <summary>
+            开始连续采集
+            </summary>
+            <param name="isWhiteBalance">是否需要白平衡</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.StopMdigProcess">
+            <summary>
+            停止连续采集
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.Grab2d(System.Byte[])">
+            <summary>
+            面阵相机图像采集
+            </summary>
+            <param name="data">图像数组</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.Grab2d(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            面阵相机图像采集，指定图像裁剪区域
+            </summary>
+            <param name="data">图像数组</param>
+            <param name="x">裁剪起始x</param>
+            <param name="y">裁剪起始y</param>
+            <param name="width">裁剪宽度</param>
+            <param name="height">裁剪高度</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.SaveMimFile(System.String,System.Byte[])">
+            <summary>
+            采集图片，保存Mim文件到指定路径
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="data">图像数据</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.SaveMimFile(System.String,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            采集图片，保存Mim文件到指定路径
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="data">图像数据</param>
+            <param name="width">图像宽度</param>
+            <param name="height">图像高度</param>
+            <returns>采集成功状态</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.SetExposureTime(System.Double)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="value">曝光时间(ms)</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetExposureTime">
+            <summary>
+            获取曝光时间
+            </summary>
+            <returns>曝光时间(ms)</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.SetGainValue(System.Double)">
+            <summary>
+            设置Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetGainValue">
+            <summary>
+            获取Gain值
+            </summary>
+            <returns>Gain值</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetSystemID">
+            <summary>
+            获取相机所在的采集卡ID
+            </summary>
+            <returns>采集卡ID</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetCameraID">
+            <summary>
+            获取相机的ID
+            </summary>
+            <returns>相机ID</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetWidth">
+            <summary>
+            获取相机的Width
+            </summary>
+            <returns>Width</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.GetHeight">
+            <summary>
+            获取相机的Height
+            </summary>
+            <returns>Height</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCamera.UninitCamera">
+            <summary>
+            释放相机资源
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.Card.Matrox.MilCamera.ImageReceived">
+            <summary>
+            接收到图像数据
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCamera.BayerPattern">
+            <summary>
+            Bayer Pattern
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCamera.BayerPattern.BayerBG">
+            <summary>
+            Blue-Green
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCamera.BayerPattern.BayerGB">
+            <summary>
+            Green-Blue
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCamera.BayerPattern.BayerGR">
+            <summary>
+            Green-Red
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCameraEventArgs">
+            <summary>
+            相机事件参数类
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraEventArgs.Data">
+            <summary>
+            图像字节数据
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraEventArgs.Width">
+            <summary>
+            图像的Width
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraEventArgs.Height">
+            <summary>
+            图像的Height
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraEventArgs.CardIndex">
+            <summary>
+            采集卡序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraEventArgs.CameraIndex">
+            <summary>
+            相机在采集卡上的序号 0/1
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCameraPort">
+            <summary>
+            相机串口
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCameraPort.spClient">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCameraPort.mreEvent">
+            <summary>
+            串口通信等待事件
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.MilCameraPort.recvBuffer">
+            <summary>
+            接收缓冲
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.#ctor">
+            <summary>
+            默认构造方法
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.CreateInstance(HYC.HTCamera.Card.Matrox.CameraType)">
+            <summary>
+            创建相机端口的实例
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.Init(HYC.HTCommunication.SerialPortWrapper.HTSerialPortInfo)">
+            <summary>
+            初始化串口
+            </summary>
+            <param name="info">串口信息</param>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCameraPort.IsConnected">
+            <summary>
+            串口连接状态
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.spClient_DataReceived(System.Object,HYC.HTCommunication.SerialPortWrapper.SerialPortEventArgs)">
+            <summary>
+            接收到串口数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.SendCmd(System.String)">
+            <summary>
+            发送命令
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.SendCmd(System.Byte[])">
+            <summary>
+            发送命令
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.SetExposure(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.GetExposure(System.Single@)">
+            <summary>
+            获取曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.SetLinePeriod(System.Int32)">
+            <summary>
+            设置线扫描相机的线扫描周期
+            </summary>
+            <param name="value">线扫描周期</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.GetLinePeriod(System.Int32@)">
+            <summary>
+            获取线扫描相机的线扫描周期
+            </summary>
+            <param name="value">线扫描周期</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.SetGain(System.Single)">
+            <summary>
+            设置Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.GetGain(System.Single@)">
+            <summary>
+            获取Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPort.UnInit">
+            <summary>
+            释放串口资源
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.Card.Matrox.MilCameraPort.DataReceived">
+            <summary>
+            接收到数据
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCameraPortE2v">
+            <summary>
+            E2V相机串口数据处理类
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.SetExposure(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.GetExposure(System.Single@)">
+            <summary>
+            获取曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.SetLinePeriod(System.Int32)">
+            <summary>
+            设置线扫描相机的线扫描周期
+            </summary>
+            <param name="value">线扫描周期</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.GetLinePeriod(System.Int32@)">
+            <summary>
+            获取线扫描相机的线扫描周期
+            </summary>
+            <param name="value">线扫描周期</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.Write(System.String)">
+            <summary>
+            写参数
+            </summary>
+            <param name="strCmd">命令</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortE2v.Read(System.String)">
+            <summary>
+            读参数
+            </summary>
+            <param name="strCmd">命令</param>
+            <returns>结果</returns>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCameraPortImperx">
+            <summary>
+            Imprex相机串口数据处理类
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.SetExposure(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.GetFrameTime">
+            <summary>
+            获取相机当前帧率
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.GetExposure(System.Single@)">
+            <summary>
+            获取曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.SetGain(System.Single)">
+            <summary>
+            设置Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.GetGain(System.Single@)">
+            <summary>
+            获取Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.Write(System.UInt16,System.Int32)">
+            <summary>
+            写参数
+            </summary>
+            <param name="address">地址</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortImperx.Read(System.UInt16)">
+            <summary>
+            读参数
+            </summary>
+            <param name="address">地址</param>
+            <returns>数据</returns>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks">
+            <summary>
+            Vieworks相机串口数据处理类
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.SetExposure(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.GetExposure(System.Single@)">
+            <summary>
+            获取曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.SetGain(System.Single)">
+            <summary>
+            设置Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.GetGain(System.Single@)">
+            <summary>
+            获取Gain值
+            </summary>
+            <param name="value">Gain值</param>
+            <returns>获取结果</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.Write(System.String)">
+            <summary>
+            写参数
+            </summary>
+            <param name="strCmd">命令</param>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCameraPortVieworks.Read(System.String)">
+            <summary>
+            读参数
+            </summary>
+            <param name="strCmd">命令</param>
+            <returns>结果</returns>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCaptureCard">
+            <summary>
+            Mil采集卡
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCaptureCard.CardIndex">
+            <summary>
+            采集卡序号
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCaptureCard.InitCaptureCard(Matrox.MatroxImagingLibrary.MIL_ID,HYC.HTCamera.Card.Matrox.MilCardInfo,System.Int32)">
+            <summary>
+            初始化采集卡
+            </summary>
+            <param name="systemId">采集卡分配的ID</param>
+            <param name="cardInfo">与采集卡连接的相机的信息</param>
+            <param name="cardIndex">采集卡序号</param>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCaptureCard.CameraCount">
+            <summary>
+            已连接的相机数量
+            </summary>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCaptureCard.GetCamera(System.Int32)">
+            <summary>
+            获取MilCamera实例
+            </summary>
+            <param name="index">相机在采集卡上的序号 0/1</param>
+            <returns>MilCamera实例</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCaptureCard.GetCameraPort(System.Int32)">
+            <summary>
+            获取相机串行通信MilCameraPort实例
+            </summary>
+            <param name="index">相机在采集卡上的序号 0/1</param>
+            <returns>MilCameraPort实例</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCaptureCard.GetSystemId">
+            <summary>
+            获取采集卡分配的ID
+            </summary>
+            <returns>采集卡分配的ID</returns>
+        </member>
+        <member name="M:HYC.HTCamera.Card.Matrox.MilCaptureCard.FreeCaptureCard">
+            <summary>
+            释放采集卡资源
+            </summary>
+        </member>
+        <member name="E:HYC.HTCamera.Card.Matrox.MilCaptureCard.ImageReceived">
+            <summary>
+            接收到图像数据
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.MilCardInfo">
+            <summary>
+            用于初始化相机的参数类
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.IsLine">
+            <summary>
+            是否为线扫描相机
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.StrDcfs">
+            <summary>
+            Dcf文件路径
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.SpInfos">
+            <summary>
+            SerialPort信息
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.Deepth">
+            <summary>
+            颜色深度,默认8
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.BufferCount">
+            <summary>
+            申请的相机图像采集buffer数量，默认值20
+            需要在MilConfig中为相机分配足够的内存
+            </summary>
+        </member>
+        <member name="P:HYC.HTCamera.Card.Matrox.MilCardInfo.CameraType">
+            <summary>
+            相机类型
+            </summary>
+        </member>
+        <member name="T:HYC.HTCamera.Card.Matrox.CameraType">
+            <summary>
+            相机类型
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.CameraType.Vieworks">
+            <summary>
+            Vieworks
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.CameraType.E2v">
+            <summary>
+            E2v
+            </summary>
+        </member>
+        <member name="F:HYC.HTCamera.Card.Matrox.CameraType.Imperx">
+            <summary>
+            Imperx
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+	<!-- 结果图显示区域 -->
+	<Address>
+
+		<First_Layer id="0"  >True</First_Layer>
+		<Two_Layer	id="1" >True</Two_Layer>
+		<Three_Layer id="2">True</Three_Layer>
+		<Four_Layer id="3" >True</Four_Layer>
+		<Five_Layer id="4" >True</Five_Layer>
+
+	</Address>
+</Settings>

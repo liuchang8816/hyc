@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTLog</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTLog.Class.SimpleHybirdLock">
+            <summary>
+            一个简单的混合线程同步锁，采用了基元用户加基元内核同步构造实现
+            </summary> 
+        </member>
+        <member name="F:HYC.HTLog.Class.SimpleHybirdLock.disposedValue">
+            <summary>
+            要检测冗余调用
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Class.SimpleHybirdLock.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Class.SimpleHybirdLock.m_waiters">
+            <summary>
+            基元用户模式构造同步锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Class.SimpleHybirdLock.m_waiterLock">
+            <summary>
+            基元内核模式构造同步锁
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Class.SimpleHybirdLock.Enter">
+            <summary>
+            获取锁
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Class.SimpleHybirdLock.Leave">
+            <summary>
+            离开锁
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Class.SimpleHybirdLock.IsWaitting">
+            <summary>
+            获取当前锁是否在等待当中
+            </summary>
+        </member>
+        <member name="T:HYC.HTLog.Core.ILogNet">
+            <summary>
+            一个通用的日志接口
+            </summary> 
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.RecordMessage(HYC.HTLog.Core.MessageDegree,System.String,System.String)">
+            <summary>
+            自定义的消息记录
+            </summary>
+            <param name="degree">消息等级</param>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteDebug(System.String)">
+            <summary>
+            写入一条调试日志
+            </summary>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteDebug(System.String,System.String)">
+            <summary>
+            写入一条调试日志
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteError(System.String)">
+            <summary>
+            写入一条错误日志
+            </summary>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteError(System.String,System.String)">
+            <summary>
+            写入一条错误日志
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteException(System.String,System.Exception)">
+            <summary>
+            写入一条异常信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteException(System.String,System.String,System.Exception)">
+            <summary>
+            写入一条异常信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">内容</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteFatal(System.String)">
+            <summary>
+            写入一条致命日志
+            </summary>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteFatal(System.String,System.String)">
+            <summary>
+            写入一条致命日志
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteInfo(System.String)">
+            <summary>
+            写入一条信息日志
+            </summary>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteInfo(System.String,System.String)">
+            <summary>
+            写入一条信息日志
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteNewLine">
+            <summary>
+            写入一行换行符
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteAnyString(System.String)">
+            <summary>
+            写入任意字符串
+            </summary>
+            <param name="text">文本</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteWarn(System.String)">
+            <summary>
+            写入一条警告日志
+            </summary>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.WriteWarn(System.String,System.String)">
+            <summary>
+            写入一条警告日志
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">日志内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.SetMessageDegree(HYC.HTLog.Core.MessageDegree)">
+            <summary>
+            设置日志的存储等级，高于该等级的才会被存储
+            </summary>
+            <param name="degree">登记信息</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.ILogNet.GetExistLogFileNames">
+            <summary>
+            获取已存在的日志文件名称
+            </summary>
+            <returns>文件列表</returns>
+        </member>
+        <member name="T:HYC.HTLog.Core.LogBase">
+            <summary>
+            日志存储类的基类
+            </summary> 
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.#ctor">
+            <summary>
+            实例化一个日志对象
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.m_messageDegree">
+            <summary>
+            默认的存储规则
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.m_WaitForSave">
+            <summary>
+            待存储数据的缓存
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.m_simpleHybirdLock">
+            <summary>
+            缓存列表的锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.m_SaveStatus">
+            <summary>
+            存储状态
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.m_fileSaveLock">
+            <summary>
+            文件存储的锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.dictFileSaveLock">
+            <summary>
+            文件锁，访问相同的文件时互锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.dictLock">
+            <summary>
+            访问dictFileSaveLock的锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.LogBase.LogFileHeadString">
+            <summary>
+            文件名前缀
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteDebug(System.String)">
+            <summary>
+            写入一条调试信息
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteDebug(System.String,System.String)">
+            <summary>
+            写入一条调试信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteInfo(System.String)">
+            <summary>
+            写入一条普通信息
+            </summary>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteInfo(System.String,System.String)">
+            <summary>
+            写入一条普通信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteWarn(System.String)">
+            <summary>
+            写入一条警告信息
+            </summary>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteWarn(System.String,System.String)">
+            <summary>
+            写入一条警告信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteError(System.String)">
+            <summary>
+            写入一条错误消息
+            </summary>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteError(System.String,System.String)">
+            <summary>
+            写入一条错误消息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteFatal(System.String)">
+            <summary>
+            写入一条致命错误信息
+            </summary>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteFatal(System.String,System.String)">
+            <summary>
+            写入一条致命错误信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteException(System.String,System.Exception)">
+            <summary>
+            写入一条异常信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="ex">异常信息</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteException(System.String,System.String,System.Exception)">
+            <summary>
+            写入一条异常信息
+            </summary>
+            <param name="keyWord">关键字</param>
+            <param name="text">内容</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.RecordMessage(HYC.HTLog.Core.MessageDegree,System.String,System.String)">
+            <summary>
+            记录一条自定义的消息
+            </summary>
+            <param name="degree">消息的等级</param>
+            <param name="keyWord">关键字</param>
+            <param name="text">文本</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteDescrition(System.String)">
+            <summary>
+            写入一条解释性的消息，不需要带有回车键
+            </summary>
+            <param name="description">解释性的文本</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteAnyString(System.String)">
+            <summary>
+            写入一条任意字符
+            </summary>
+            <param name="text">内容</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.WriteNewLine">
+            <summary>
+            写入一条换行符
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.SetMessageDegree(HYC.HTLog.Core.MessageDegree)">
+            <summary>
+            设置日志的存储等级，高于该等级的才会被存储
+            </summary>
+            <param name="degree">消息等级</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.GetFileSaveName">
+            <summary>
+            获取要存储的文件的名称
+            </summary>
+            <returns>完整的文件路径信息，带文件名</returns>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.CheckPathEndWithSprit(System.String)">
+            <summary>
+            返回检查的路径名称，将会包含反斜杠
+            </summary>
+            <param name="filePath">路径信息</param>
+            <returns>检查后的结果对象</returns>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">是否初次调用</param>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.LogBase.GetSaveStringFromException(System.String,System.Exception)">
+            <summary>
+            通过异常文本格式化成字符串用于保存或发送
+            </summary>
+            <param name="text">文本消息</param>
+            <param name="ex">异常</param>
+            <returns>异常最终信息</returns>
+        </member>
+        <member name="T:HYC.HTLog.Core.GenerateMode">
+            <summary>
+            日志文件输出模式
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEveryHour">
+            <summary>
+            按每个小时生成日志文件
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEveryDay">
+            <summary>
+            按每天生成日志文件
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEveryWeek">
+            <summary>
+            按每个周生成日志文件
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEveryMonth">
+            <summary>
+            按每个月生成日志文件
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEverySeason">
+            <summary>
+            按每季度生成日志文件
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.GenerateMode.ByEveryYear">
+            <summary>
+            按每年生成日志文件
+            </summary>
+        </member>
+        <member name="T:HYC.HTLog.Core.MessageDegree">
+            <summary>
+            记录消息的等级
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.None">
+            <summary>
+            一条消息都不记录
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.FATAL">
+            <summary>
+            记录致命等级及以上日志的消息
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.ERROR">
+            <summary>
+            记录异常等级及以上日志的消息
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.WARN">
+            <summary>
+            记录警告等级及以上日志的消息
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.INFO">
+            <summary>
+            记录信息等级及以上日志的消息
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Core.MessageDegree.DEBUG">
+            <summary>
+            记录调试等级及以上日志的信息
+            </summary>
+        </member>
+        <member name="T:HYC.HTLog.Core.MessageItem">
+            <summary>
+            单个日志的记录信息
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.MessageItem.#ctor">
+            <summary>
+            默认的无参构造器
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.Id">
+            <summary>
+            单个记录信息的标识ID，程序重新运行时清空
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.Degree">
+            <summary>
+            消息的等级
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.ThreadId">
+            <summary>
+            线程ID
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.Text">
+            <summary>
+            消息文本
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.Time">
+            <summary>
+            消息发生的事件
+            </summary>
+        </member>
+        <member name="P:HYC.HTLog.Core.MessageItem.KeyWord">
+            <summary>
+            消息的关键字
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Core.MessageItem.ToString">
+            <summary>
+            返回表示当前对象的字符串
+            </summary>
+            <returns>字符串信息</returns>
+        </member>
+        <member name="T:HYC.HTLog.Logs.LogManagerDateTime">
+            <summary>
+            一个日志组件，可以根据时间来区分不同的文件存储
+            </summary> 
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogManagerDateTime.#ctor(System.String,HYC.HTLog.Core.GenerateMode)">
+            <summary>
+            实例化一个根据时间存储的日志组件
+            </summary>
+            <param name="filePath">文件存储的路径</param>
+            <param name="generateMode">存储文件的间隔</param>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogManagerDateTime.#ctor(System.String,System.String,HYC.HTLog.Core.GenerateMode)">
+            <summary>
+            实例化一个根据时间存储的日志组件，存储路径为：filePath/yyyyMMdd/logName_*.log
+            </summary>
+            <param name="filePath">文件存储的路径</param>
+            <param name="logName">log类型名称</param>
+            <param name="generateMode">存储文件的间隔</param>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogManagerDateTime.GetFileSaveName">
+            <summary>
+            获取需要保存的日志文件
+            </summary>
+            <returns>完整的文件路径，含文件名</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogManagerDateTime.GetExistLogFileNames">
+            <summary>
+            获取所有的文件夹中的日志文件
+            </summary>
+            <returns>所有的文件路径集合</returns>
+        </member>
+        <member name="F:HYC.HTLog.Logs.LogManagerDateTime.m_fileName">
+            <summary>
+            当前正在存储的文件名称
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Logs.LogManagerDateTime.m_filePath">
+            <summary>
+            文件的路径
+            </summary>
+        </member>
+        <member name="F:HYC.HTLog.Logs.LogManagerDateTime.generateMode">
+            <summary>
+            文件的存储模式，默认按照年份来存储
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogManagerDateTime.ToString">
+            <summary>
+            返回表示当前对象的字符串
+            </summary>
+            <returns>字符串</returns>
+        </member>
+        <member name="T:HYC.HTLog.Logs.LogMangerFileSize">
+            <summary>
+            根据文件的大小来存储日志信息
+            </summary> 
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.#ctor(System.String,System.Int32)">
+            <summary>
+            实例化一个根据文件大小生成新文件的
+            </summary>
+            <param name="filePath">日志文件的保存路径</param>
+            <param name="fileMaxSize">每个日志文件的最大大小，默认2M</param>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            实例化一个根据文件大小生成新文件的
+            </summary>
+            <param name="filePath">日志文件的保存路径</param>
+            <param name="logName">log类型名称</param>
+            <param name="fileMaxSize">每个日志文件的最大大小，默认2M</param>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.GetFileSaveName">
+            <summary>
+            获取需要保存的日志文件
+            </summary>
+            <returns>字符串数据</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.GetExistLogFileNames">
+            <summary>
+            返回所有的日志文件
+            </summary>
+            <returns>所有的日志文件信息</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.GetLastAccessFileName">
+            <summary>
+            获取之前保存的日志文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.GetDefaultFileName">
+            <summary>
+            获取一个新的默认的文件名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerFileSize.ToString">
+            <summary>
+            返回表示当前对象的字符串
+            </summary>
+            <returns>字符串数据</returns>
+        </member>
+        <member name="T:HYC.HTLog.Logs.LogMangerSingle">
+            <summary>
+            单日志文件对象
+            </summary>
+            <remarks>
+            此日志实例化需要指定一个完整的文件路径，当需要记录日志的时候调用方法，会使得日志越来越大，对于写入的性能没有太大影响，但是会影响文件读取。
+            </remarks>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.#ctor(System.String)">
+            <summary>
+            实例化一个单文件日志的对象
+            </summary>
+            <param name="filePath">文件的路径</param>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.ClearLog">
+            <summary>
+            单日志文件允许清空日志内容
+            </summary>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.GetAllSavedLog">
+            <summary>
+            获取单日志文件的所有保存记录
+            </summary>
+            <returns>字符串信息</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.GetExistLogFileNames">
+            <summary>
+            获取所有的日志文件数组，对于单日志文件来说就只有一个
+            </summary>
+            <returns>字符串数组，包含了所有的存在的日志数据</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.GetFileSaveName">
+            <summary>
+            获取存储的文件的名称
+            </summary>
+            <returns>字符串数据</returns>
+        </member>
+        <member name="M:HYC.HTLog.Logs.LogMangerSingle.ToString">
+            <summary>
+            返回表示当前对象的字符串
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

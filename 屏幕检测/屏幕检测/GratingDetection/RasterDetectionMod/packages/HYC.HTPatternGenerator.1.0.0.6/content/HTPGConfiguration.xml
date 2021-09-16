@@ -1,0 +1,12 @@
+﻿<HTPGs>
+  <HTPG Name="HYC" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPG"></HTPG>
+  <HTPG Name="JC" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGJC"></HTPG>
+  <HTPG Name="SU_BO" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGSB"></HTPG>
+  <HTPG Name="VIRL" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGVirl"></HTPG>
+  <HTPG Name="H72" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGH72"></HTPG>
+  <HTPG Name="ZR" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGZR"></HTPG>
+  <HTPG Name="OGI_IO_LAN" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGOGI_LanAndIO"></HTPG>
+  <HTPG Name="OGI_SERIAL" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGOGI_Serial"></HTPG>
+  <HTPG Name="OGI_LAN" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGOGI_Lan"></HTPG>
+  <HTPG Name="Freedom" Assembly="HYC.HTPatternGenerator" ClassName="HYC.HTPatternGenerator.HTPGFreedom"></HTPG>
+</HTPGs>

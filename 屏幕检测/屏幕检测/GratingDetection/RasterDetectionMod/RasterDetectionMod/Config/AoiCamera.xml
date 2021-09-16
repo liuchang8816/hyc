@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--相机的串口连接信息-->
+  <BaudRate>115200</BaudRate>
+  <DataBits>8</DataBits>
+  <StopBits>1</StopBits>
+  <Parity>N</Parity>
+  <Port_0>5</Port_0>
+  <!--相机的配置文件路径-->
+  <Dcfs_0>Dcfs/101M.dcf</Dcfs_0>
+</Settings>

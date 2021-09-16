@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTDB</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTDB.HTDBHelper">
+            <summary>
+            数据库帮助类
+            </summary>
+        </member>
+        <member name="P:HYC.HTDB.HTDBHelper.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.CreateSQLServer">
+            <summary>
+            获取访问SQLServer数据库的实例
+            </summary>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.CreateMySQL">
+            <summary>
+            获取访问MySQL数据库的实例
+            </summary>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.CreateSQLite">
+            <summary>
+            获取访问SQLite数据库的实例
+            </summary>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteNonQuery(System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行SQL语句，返回受影响的行数
+            </summary>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteScalar(System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行
+            </summary>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>单个数据</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteDataSet(System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，返回DataSet数据集
+            </summary>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>DataSet数据集</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteNonQuery(System.String,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行SQL语句，返回受影响的行数
+            </summary>
+            <param name="connStr">连接字符串</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteScalar(System.String,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行
+            </summary>
+            <param name="connStr">连接字符串</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>单个数据</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteDataSet(System.String,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，返回DataSet数据集
+            </summary>
+            <param name="connStr">连接字符串</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>DataSet数据集</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteNonQuery(System.Data.Common.DbConnection,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行SQL语句，返回受影响的行数
+            </summary>
+            <param name="connection">已打开的SQL连接</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteScalar(System.Data.Common.DbConnection,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行
+            </summary>
+            <param name="connection">已打开的SQL连接</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>单个数据</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteDataSet(System.Data.Common.DbConnection,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，返回DataSet数据集
+            </summary>
+            <param name="connection">已打开的SQL连接</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>DataSet数据集</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ConvertParameters(System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            转换参数
+            </summary>
+            <param name="parameters">参数列表</param>
+            <returns>参数类数组</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.BeginTransaction">
+            <summary>
+            启动事务
+            </summary>
+            <returns>事务</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.BeginTransaction(System.String)">
+            <summary>
+            启动事务
+            </summary>
+            <param name="connStr">连接字符串</param>
+            <returns>事务</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteNonQuery(System.Data.Common.DbTransaction,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行SQL语句，返回受影响的行数
+            </summary>
+            <param name="transaction">事务</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteScalar(System.Data.Common.DbTransaction,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行
+            </summary>
+            <param name="transaction">事务</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>单个数据</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.ExecuteDataSet(System.Data.Common.DbTransaction,System.String,System.Data.CommandType,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            执行查询，返回DataSet数据集
+            </summary>
+            <param name="transaction">事务</param>
+            <param name="cmdText">sql语句</param>
+            <param name="cmdType">文本或储存过程</param>
+            <param name="parameters">参数</param>
+            <returns>DataSet数据集</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.GetConnection(System.String)">
+            <summary>
+            获取新的连接
+            </summary>
+            <param name="connStr">连接字符串</param>
+            <returns>数据库连接</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.GetDataAdapter(System.Data.Common.DbCommand)">
+            <summary>
+            获取DataAdapter
+            </summary>
+            <param name="cmd">数据库命令</param>
+            <returns>DataAdapter</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelper.GetParameter(System.String,System.Object)">
+            <summary>
+            获取参数类
+            </summary>
+            <param name="name">参数名</param>
+            <param name="value">参数值</param>
+            <returns>参数对象</returns>
+        </member>
+        <member name="T:HYC.HTDB.HTDBHelperExtentions">
+            <summary>
+            HTDBHelper拓展方法
+            </summary>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelperExtentions.Execute(HYC.HTDB.HTDBHelper,System.String,System.Object)">
+            <summary>
+            执行sql，返回受影响的行数
+            </summary>
+            <param name="db">HTDBHelper对象</param>
+            <param name="sql">SQL语句</param>
+            <param name="param">类或匿名类的对象</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:HYC.HTDB.HTDBHelperExtentions.Query``1(HYC.HTDB.HTDBHelper,System.String,System.Object)">
+            <summary>
+            查询数据库记录，返回对象的集合
+            </summary>
+            <typeparam name="T">类名</typeparam>
+            <param name="db">HTDBHelper对象</param>
+            <param name="sql">SQL语句</param>
+            <param name="param">类或匿名类的对象</param>
+            <returns>查询类的集合</returns>
+        </member>
+        <member name="T:HYC.HTDB.MySQLHelper">
+            <summary>
+            MySQL帮助类
+            </summary>
+        </member>
+        <member name="T:HYC.HTDB.SQLHelper">
+            <summary>
+            SQLServer帮助类
+            </summary>
+        </member>
+        <member name="T:HYC.HTDB.SQLiteHelper">
+            <summary>
+            SQLite帮助类
+            </summary>
+        </member>
+    </members>
+</doc>

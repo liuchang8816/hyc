@@ -1,0 +1,8 @@
+﻿[INFO ] 2021-09-07 16:39:16.447 thread:[01] AOI相机连接失败！无法加载 DLL“mil.dll”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。
+[INFO ] 2021-09-07 16:39:16.565 thread:[01] 光源1连接失败！LoadPowerConfigFailed
+[INFO ] 2021-09-07 16:39:16.685 thread:[01] Aoi机种选择失败! 机种Default不存在！
+[INFO ] 2021-09-07 16:39:34.419 thread:[01] 光源1连接失败！LoadPowerConfigFailed
+[INFO ] 2021-09-07 16:39:44.534 thread:[03] PLC连接失败！
+[INFO ] 2021-09-07 17:41:12.679 thread:[01] AOI相机连接失败！无法加载 DLL“mil.dll”: 找不到指定的模块。 (异常来自 HRESULT:0x8007007E)。
+[INFO ] 2021-09-07 17:41:12.719 thread:[01] 光源1连接失败！LoadPowerConfigFailed
+[INFO ] 2021-09-07 17:41:12.819 thread:[01] Aoi机种选择失败! 机种Default不存在！

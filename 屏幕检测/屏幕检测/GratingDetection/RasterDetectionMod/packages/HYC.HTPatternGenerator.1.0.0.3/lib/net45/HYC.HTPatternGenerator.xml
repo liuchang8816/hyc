@@ -1,0 +1,2363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.HTPatternGenerator</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.HTPatternGenerator.HTPGConfigItem">
+            <summary>
+            PG配置文件对应的数据类型
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGConfigItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGConfigItem.Assembly">
+            <summary>
+            空间名称
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGConfigItem.ClassName">
+            <summary>
+            类名,包含空间名称
+            </summary>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPatternGeneratorFactory">
+            <summary>
+            PG工厂类
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPatternGeneratorFactory.GetPGs">
+            <summary>
+            获取可用的PG类型
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPatternGeneratorFactory.CreatePGTester(System.String)">
+            <summary>
+             初始化Item
+            </summary>
+            <param name="PGName">哪种PG 枚举</param>
+            <returns>相应的PG实例   null：获取失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPatternGeneratorFactory.CreatePGTester(HYC.HTPatternGenerator.EHTPG)">
+            <summary>
+             初始化Item
+            </summary>
+            <param name="PGName">哪种PG 枚举</param>
+            <returns>相应的PG实例   null：获取失败</returns>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGEvent.m_PGOperateResultChange">
+            <summary>
+            触发事件
+            </summary>
+        </member>
+        <member name="E:HYC.HTPatternGenerator.HTPGEvent.HTPGOperateResultChange">
+            <summary>
+            事件的注册/取消
+            </summary>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.OperateResult">
+            <summary>
+            自定义对象,负责PG事件的数据传输
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.Index">
+            <summary>
+            PG索引
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.PGCmd">
+            <summary>
+            具体的PG指令
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.IsSuccess">
+            <summary>
+            指示本次访问是否成功
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.Message">
+            <summary>
+            具体的描述
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OperateResult.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OperateResult.#ctor(System.Int32,HYC.HTPatternGenerator.PGTesterCmd)">
+            <summary>
+            初始化
+            </summary> 
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.ErrorCode">
+            <summary>
+            具体的错误代码
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.OperateResult.Content">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OperateResult.CreateFailedResult(System.Int32,HYC.HTPatternGenerator.PGTesterCmd)">
+            <summary>
+            返回成功的数据对象
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OperateResult.CreateSuccessResult(System.Int32,HYC.HTPatternGenerator.PGTesterCmd)">
+            <summary>
+            返回失败的数据对象
+            </summary> 
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGH72">
+            <summary>
+            H72
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGH72.logNet">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGH72.ConnectStatus">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGH72.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.DemauraOff(System.Int32)">
+            <summary>
+            Demura 开
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.DemuraOn(System.Int32)">
+            <summary>
+            Demura 关
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.GetPowerStatus(System.Int32)">
+            <summary>
+            获取电源开关状态
+            </summary>
+            <param name="channel"></param>
+            <returns>0：off  1:on</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.InitServer(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.SocketServer_ClientDisconnected(System.Object,HYC.HTCommunication.SocketWrapper.SocketEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.SocketServer_ClientConnected(System.Object,HYC.HTCommunication.SocketWrapper.SocketEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.Uninit(System.Int32)">
+            <summary>
+            结束
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.InitSerialPort(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serialPortLst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            通过RGB切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            通过NAME切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="patternName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            通过ID切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="patternIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            文件传输
+            </summary>
+            <param name="channel"></param>
+            <param name="data">模组文件</param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            文件传输
+            </summary>
+            <param name="channel"></param>
+            <param name="filePath"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.GetConnectStatus(System.Int32)">
+            <summary>
+             获取连接状态
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.GetVoltageValue(System.Int32)">
+            <summary>
+            获取电压值
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGH72.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            H72检查机上位机为服务器，监听5000端口，固定Ip为192.168.168.12
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.H72Tester">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.H72Tester.SendLockObject">
+            <summary>
+            发送锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.H72Tester.ReceiveLockObject">
+            <summary>
+            接受锁
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.H72Tester._SocketConnection">
+            <summary>
+            连接对象
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.Init_H72(HYC.HTCommunication.SocketWrapper.HTSocketConnection)">
+            <summary>
+            初始化
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.Send(System.Byte[])">
+            <summary>
+            发送
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.GetState(System.Int32)">
+            <summary>
+            获取状态
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.PrePattern(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.NextPattern(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.Step(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.Module01(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="nChannel"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.DownBmp01(System.Byte[])">
+            <summary>
+            下载图片
+            </summary>
+            <param name="bt"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.GetBmpSize(System.Byte[],System.Int32@)">
+            <summary>
+            获取图片
+            </summary>
+            <param name="binData"></param>
+            <param name="intFileSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.H72Tester.GetBinList(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="binData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGFreedom">
+            <summary>
+            freedom
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGFreedom.logNet">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGFreedom.Tester">
+            <summary>
+            freedom检查机对象
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGFreedom.IsConn">
+             <summary>
+            接口连接状态
+             </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGFreedom.Index">
+            <summary>
+            检查机编号
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.GetConnectStatus(System.Int32)">
+            <summary>
+            获取连接状态
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary>
+            <param name="channel"></param>
+            <returns>csv格式字符串</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.InitSerialPort(System.String)">
+            <summary>
+            初始化串口号
+            </summary>
+            <param name="serialPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            RGB切图
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="channel"></param>
+            <param name="patternIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常 </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGFreedom.Uninit(System.Int32)">
+            <summary>
+            关闭释放
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.InitSockit(System.String,System.String)">
+            <summary>
+            通信连接初始化(只要一次初始化)
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.GetPgConnectState(System.Int32,System.Int32)">
+            <summary>
+            获取TEMS和PG连接状态
+            </summary>
+            <param name="nCh">0：TEMS;1~8表示PG的编号</param>
+            <param name="nTimeOut">超时</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.GetGammaData(System.Int32,System.Text.StringBuilder,System.Int32,System.Int32)">
+            <summary>
+            获取Gamma调整数据
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.GetDemuraData(System.Int32,System.Text.StringBuilder,System.Int32,System.Int32)">
+            <summary>
+            获取Demura
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.GetPowerState(System.Int32,System.Int32)">
+            <summary>
+            获取PG点灯信息
+            </summary>
+            <param name="nCh"></param>
+            <param name="nTimeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DLLImport_JC.RegisterFunGammaEnd(HYC.HTPatternGenerator.DLLImport_JC.pGammaEnd)">
+            <summary>
+            Gamma测试结束回调
+            </summary> 
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGJC">
+            <summary>
+            JC检查机
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGJC.logNet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGJC.Index">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.DemauraOff(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.DemuraOn(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="filePath"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.GetPowerStatus(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.InitSerialPort(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="serialPortLst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="patternName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="patternIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PatternNext(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PatternPrevious(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PowerOff(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.PowerOn(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.Uninit(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.InitSerialPort(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serialPortLst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="data"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.GetConnectStatus(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.GetVoltageValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGJC.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.DllImport_OGINet">
+            <summary>
+            OGI检查机LAN协议
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet.GetCurrentResult(System.String@)">
+            <summary>
+            获取当前电流检测值
+            </summary>
+            <param name="strResult">CSV格式字符串</param>
+            <returns>是否获取成功</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet.GetResitanceResult(System.String@)">
+            <summary>
+            获取当前阻抗检测值
+            </summary>
+            <param name="strResult">CSV格式字符串</param>
+            <returns>是否获取成功</returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.DllImport_OGINet_V008">
+            <summary>
+            008版本网络接口  20201122
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.GetCurrentResult(System.String@)">
+            <summary>
+            获取当前电流检测值
+            </summary>
+            <param name="strResult">CSV格式字符串</param>
+            <returns>是否获取成功</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.GetResitanceResult(System.String@)">
+            <summary>
+            获取当前阻抗检测值
+            </summary>
+            <param name="strResult">CSV格式字符串</param>
+            <returns>是否获取成功</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_Init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_Release">
+            <summary>
+            release
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_Open(System.String)">
+            <summary>
+            连接
+            </summary>
+            <param name="strIPAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_Close(System.Int32)">
+            <summary>
+            断开
+            </summary>
+            <param name="nhTester"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_GetVersion(System.Int32,System.Text.StringBuilder,System.Int32)">
+            <summary>
+            获取版本号
+            </summary>
+            <param name="nhTester"></param>
+            <param name="strVersion"></param>
+            <param name="nBufSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_SetStepNum(System.Int32,System.Int32)">
+            <summary>
+            索引切图
+            </summary>
+            <param name="nhTester"></param>
+            <param name="nStepNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_OutputCtrl(System.Int32,System.Int32,System.UInt32)">
+            <summary>
+            开关电
+            </summary>
+            <param name="nhTester"></param>
+            <param name="nOnOff">1= 出力 ON, 0=出力 OFF </param>
+            <param name="nOVCChkIntval">指定执行超电流检查之前的时间（msec）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_StepFwd(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="nhTester"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_StepBack(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="nhTester"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.DllImport_OGINet_V008.OGI7NetLib_SetLevel(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            指定输出灰度
+            </summary>
+            <param name="nhTester"></param>
+            <param name="nR"></param>
+            <param name="nG"></param>
+            <param name="nB"></param>
+            <param name="nW"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGOGI_Lan">
+            <summary>
+            OGI检查机通信，高版本的可以只用网络接口就能操作所有的功能
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_Lan.logNet">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_Lan.OGINetIndex">
+            <summary>
+            网络接口连接的检查机号，0为没有 ，0以外为连接的编号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_Lan.NetIsConn">
+            <summary>
+            网络接口连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGOGI_Lan.Index">
+            <summary>
+            检查机编号
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.GetConnectStatus(System.Int32)">
+            <summary>
+            获取连接状态
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary>
+            <param name="channel"></param>
+            <returns>csv格式字符串</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            网络最多可以连接32台检查机。连接台数第33台以后作为返回值变为OGI 7LIB ERR
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.InitSerialPort(System.String)">
+            <summary>
+            初始化串口号
+            </summary>
+            <param name="serialPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            RGB切图
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="channel">检查机对象</param>
+            <param name="patternIndex">指定步编号（0～64）</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  / 2=处理中  / 3=没有回复  / 4=失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  / 2=处理中  / 3=没有回复  / 4=失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  / 2=处理中  / 3=没有回复  / 4=失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  / 2=处理中  / 3=没有回复  / 4=失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>1=成功 /  0=错误  / -1=标准库执行异常  / 2=处理中  / 3=没有回复  / 4=失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Lan.Uninit(System.Int32)">
+            <summary>
+            关闭释放
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGOGI_LanAndIO">
+            <summary>
+            OGI检查机通信，低版本的需要用网络就和IO接口一起才能使用所有的功能
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.logNet">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.IOCtrl">
+            <summary>
+            IO控制类
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.OGINetIndex">
+            <summary>
+            网络接口连接的检查机号，0为没有 ，0以外为连接的编号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.NetIsConn">
+            <summary>
+            网络接口连接状态
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.IOIsConn">
+            <summary>
+            IO接口连接状态
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.ConnType">
+            <summary>
+            连接设备的方式   1:只连接IO   2：同时连接IO和Lan
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.Index">
+            <summary>
+            检查机编号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.m_patternIndex">
+            <summary>
+            图片编号
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.GetConnectStatus(System.Int32)">
+            <summary>
+            获取连接状态
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary>
+            <param name="channel"></param>
+            <returns>csv格式字符串</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            网络最多可以连接32台检查机。连接台数第33台以后作为返回值变为OGI 7LIB ERR
+            </summary>
+            <param name="ip">如果为""则不初始化网口</param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.InitSerialPort(System.String)">
+            <summary>
+            初始化串口号
+            </summary>
+            <param name="serialPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="channel">检查机对象</param>
+            <param name="patternIndex">指定步编号（0～56）</param>
+            <returns>0=成功 /  1=失敗  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=成功 /  1=失敗(通信異常)  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=成功 /  1=失敗(通信異常)  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=正常/ 1=失敗(通信異常) /  -1=程序异常 </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=正常/ 1=失敗(通信異常) /  -1=程序异常 </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_LanAndIO.Uninit(System.Int32)">
+            <summary>
+            关闭释放
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGOGI_Serial">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGOGI_Serial.logNet">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGOGI_Serial.m_patternIndex">
+            <summary>
+            图片序号
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGOGI_Serial.Index">
+            <summary>
+            检查机编号
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.InitSerialPort(System.String)">
+            <summary>
+            初始化串口号
+            </summary>
+            <param name="serialPort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="channel">检查机对象</param>
+            <param name="patternIndex">指定步编号（0～56）</param>
+            <returns>0=成功 /  1=失敗(通信異常)  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=成功 /  1=失敗(通信異常)  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=成功 /  1=失敗(通信異常)  / -1=程序异常</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=正常/ 1=失敗(通信異常) /  2=失敗(過電流検知)/  -1=程序异常 </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel">检查机对象</param>
+            <returns>0=正常/ 1=失敗(通信異常) /  2=失敗(過電流検知)/  -1=程序异常 </returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGOGI_Serial.Uninit(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.OGIIO_Ctrl">
+            <summary>
+            OGI检查机DIO操作类，使用Advantech（研华）IO卡
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.Init(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="deviceDescription"></param>
+            <param name="profilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="waitTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="waitTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.EnableChannel(System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="isEnabled"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.Step(System.Byte,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="step"></param>
+            <param name="waitTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.IsCurrentOK(System.Int32)">
+            <summary>
+            电流检测结果
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.IsResistanceOK(System.Int32)">
+            <summary>
+            阻抗检测结果
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.IsAutoMode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.SetManualMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.TesterWrite(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="datas"></param>
+            <param name="waitTime"></param>
+            <param name="powerOn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.Read">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:HYC.HTPatternGenerator.OGIIO_Ctrl.IoMonitor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.OnInputMonitor(System.Boolean[],System.Boolean[])">
+            <summary>
+            
+            </summary>
+            <param name="inputSignals"></param>
+            <param name="outputSignals"></param>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.OGIIO_Ctrl.TesterOutput">
+            <summary>
+            输出参数枚举
+            </summary>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.OGIIO_Ctrl.TesterInput">
+            <summary>
+            输入参数枚举
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.OGIIO_Ctrl.UnInit">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGSB">
+            <summary>
+            速波检查机
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGSB.ConnectStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGSB.Index">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.InitSerialPort(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serialPortLst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PowerOff(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PowerOn(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            画面切换
+            0201:表示第二个主画面下一子画面
+            </summary>
+            <param name="masterIndex">主画面</param>
+            <param name="slaverIndex">子画面</param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="patternName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.Client_DataReceived(System.Object,HYC.HTCommunication.SerialPortWrapper.SerialPortEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="data"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.GetPowerStatus(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.SendCmd(System.Byte[],System.Byte,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="strCmd"></param>
+            <param name="dataType"></param>
+            <param name="timeout"></param>
+            <param name="wait"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.Uninit(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="filePath"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.GetConnectStatus(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.GetVoltageValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.DemauraOff(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.DemuraOn(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGSB.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.A1">
+            <summary>
+            执行信号源 开关电，切画面
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.A2">
+            <summary>
+            DC残留测定命令
+            </summary> 
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.A3">
+            
+            发送阻抗测定命令
+            
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.A4">
+            <summary>
+            检查机询治具对位状态命令
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.B2">
+            <summary>
+            中继基板发送给检查机 ：中继基板发送给检查机 DC残留 数
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.B3">
+            <summary>
+            //中继基板发送给检查机 ：中继基板发送给检查机 ITO参数 数据包 数
+            </summary> 
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGSB.DataType.B4">
+            <summary>
+            //中继基板发送给检查机 治具对位状态数据包
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.DemauraOff(System.Int32)">
+            <summary>
+            DemauraOFF
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.DemuraOn(System.Int32)">
+            <summary>
+            DemuraOn
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.GetConnectStatus(System.Int32)">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.GetPowerStatus(System.Int32)">
+            <summary>
+            获取模组是否点亮
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.GetVoltageValue(System.Int32)">
+            <summary>
+            获取电压值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            ICFlash 擦除
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash RAM 写入
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash ROM 写入
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.InitSerialPort(System.String)">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            根据RGB现实图片
+            </summary> 
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            根据名称显示图片
+            </summary>
+            <param name="patternName"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            根据索引显示图片
+            </summary>
+            <param name="patternIndex"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PatternNext(System.Int32)">
+            <summary>
+            下一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PatternPrevious(System.Int32)">
+            <summary>
+            上一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGVirl.Uninit(System.Int32)">
+            <summary>
+            断开连接
+            </summary> 
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPGZR">
+            <summary>
+            展瑞PG
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR._localIP">
+            <summary>
+            本地IP
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR._remoteIP">
+            <summary>
+            目标IP
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR._localPort">
+            <summary>
+            本地端口号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR._remotePort">
+            <summary>
+            目标端口号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR.patternIndex">
+            <summary>
+            画面序号
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.HTPGZR.isConnected">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPGZR.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.InitSerialPort(System.String)">
+            <summary>
+            初始化串口
+            </summary> 
+            <param name="serialPortLst">串口信息</param>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.SendMessage(System.String,System.Boolean)">
+            <summary>
+            发送信息
+            </summary>
+            <param name="message">消息内容</param>
+            <param name="bOff"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.GetConnectStatus(System.Int32)">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.Uninit(System.Int32)">
+            <summary>
+            断开连接
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PatternPrevious(System.Int32)">
+            <summary>
+            上一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PatternNext(System.Int32)">
+            <summary>
+            下一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            根据RGB现实图片
+            </summary> 
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            根据名称显示图片
+            </summary>
+            <param name="channel">通道</param>
+            <param name="patternName"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            根据索引显示图片
+            </summary>
+            <param name="channel">通道</param>
+            <param name="patternIndex"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash RAM 写入
+            </summary>
+            <param name="channel">通道</param>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash ROM 写入
+            </summary>
+            <param name="channel">通道</param>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            ICFlash 擦除
+            </summary>
+            <param name="channel">通道</param>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.GetPowerStatus(System.Int32)">
+            <summary>
+            获取模组是否点亮
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.DemuraOn(System.Int32)">
+            <summary>
+            DemuraOn
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.DemauraOff(System.Int32)">
+            <summary>
+            DemauraOFF
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.GetVoltageValue(System.Int32)">
+            <summary>
+            获取电压值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPGZR.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary> 
+        </member>
+        <member name="T:HYC.HTPatternGenerator.HTPG">
+            <summary>
+            HTPG
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPG.ConnectStatus">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.HTPG.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.DemauraOff(System.Int32)">
+            <summary>
+            Demura 开
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.DemuraOn(System.Int32)">
+            <summary>
+            Demura 关
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.GetPowerStatus(System.Int32)">
+            <summary>
+            获取电源开关状态
+            </summary>
+            <param name="channel"></param>
+            <returns>0：off  1:on</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.Uninit(System.Int32)">
+            <summary>
+            结束
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            通过RGB切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            通过NAME切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="patternName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            通过ID切换图片
+            </summary>
+            <param name="channel"></param>
+            <param name="patternIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PatternNext(System.Int32)">
+            <summary>
+            下切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PatternPrevious(System.Int32)">
+            <summary>
+            上切
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            文件传输
+            </summary>
+            <param name="channel"></param>
+            <param name="data"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.GetConnectStatus(System.Int32)">
+            <summary>
+             获取连接状态
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.HTPG.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.IHTPatternGenerator">
+            <summary>
+            接口PGItem对象
+            </summary>
+        </member>
+        <member name="P:HYC.HTPatternGenerator.IHTPatternGenerator.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.GetConnectStatus(System.Int32)">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.InitLan(System.String,System.UInt16,System.String[])">
+            <summary>
+            初始化网络
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.InitSerialPort(System.String)">
+            <summary>
+            初始化串口
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.Uninit(System.Int32)">
+            <summary>
+            断开连接
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PowerOn(System.Int32)">
+            <summary>
+            开电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PowerOff(System.Int32)">
+            <summary>
+            关电
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.GetPowerStatus(System.Int32)">
+            <summary>
+            获取模组是否点亮
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.DemuraOn(System.Int32)">
+            <summary>
+            DemuraOn
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.DemauraOff(System.Int32)">
+            <summary>
+            DemauraOFF
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PatternPrevious(System.Int32)">
+            <summary>
+            上一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PatternNext(System.Int32)">
+            <summary>
+            下一张图片
+            </summary>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PatternDisplay(System.Int32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            根据RGB现实图片
+            </summary> 
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PatternDisplay(System.Int32,System.String)">
+            <summary>
+            根据名称显示图片
+            </summary>
+            <param name="patternName"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.PatternDisplay(System.Int32,System.Int32)">
+            <summary>
+            根据索引显示图片
+            </summary>
+            <param name="patternIndex"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.ICFlashRAMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash RAM 写入
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.ICFlashROMWrite(System.Int32,System.Int32)">
+            <summary>
+            ICFlash ROM 写入
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.ICFlashErase(System.Int32,System.Int32)">
+            <summary>
+            ICFlash 擦除
+            </summary>
+            <param name="timeOut"></param>
+            <returns>1:成功;非1:失败</returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.FileTransfer(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.FileTransfer(System.Int32,System.String,System.Int32)">
+            <summary>
+            文件传输
+            </summary> 
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.GetVoltageValue(System.Int32)">
+            <summary>
+            获取电压值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HYC.HTPatternGenerator.IHTPatternGenerator.GetElectricCurrentValue(System.Int32)">
+            <summary>
+            获取电流值
+            </summary> 
+        </member>
+        <member name="T:HYC.HTPatternGenerator.PGTesterCmd">
+            <summary>
+            PG的指令信息
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.None">
+            <summary>
+            无(表示错误的处理)
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.Message">
+            <summary>
+            数据信息
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.Connect">
+            <summary>
+            连接
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.DisConnect">
+            <summary>
+            断开连接
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PowerON">
+            <summary>
+            开电
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PowerOFF">
+            <summary>
+            关电
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.GetPowerStatus">
+            <summary>
+            开电状态
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.DemuraOn">
+            <summary>
+            DemuraOn
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.DemauraOFF">
+            <summary>
+            DemauraOFF
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PatternPrevious">
+            <summary>
+            上一张图片
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PatternNext">
+            <summary>
+            下一张图片
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PatternDisplayRGB">
+            <summary>
+            设置图片 RGB
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PatternDisplayName">
+            <summary>
+            设置图片 图片名称
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.PatternDisplayIndex">
+            <summary>
+            设置图片 图片索引
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.ICFlashRAMWrite">
+            <summary>
+            RAM 写入
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.ICFlashROMWrite">
+            <summary>
+            ROM 写入
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.ICFlashErase">
+            <summary>
+            IC 擦除
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.FileTransfer">
+            <summary>
+            文件传输
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.Voltage">
+            <summary>
+             电压
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.PGTesterCmd.ElectricCurrent">
+            <summary>
+            电流
+            </summary>
+        </member>
+        <member name="T:HYC.HTPatternGenerator.EHTPG">
+            <summary>
+            检查机类型
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.HYC">
+            <summary>
+            Arm 架构检查机
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.JC">
+            <summary>
+            精测
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.SU_BO">
+            <summary>
+            subo
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.VIRL">
+            <summary>
+            VIRL
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.HYC_H72">
+            <summary>
+            H72检查机
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.ZR">
+            <summary>
+            展锐
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.OGI_RS232">
+            <summary>
+            OGI 串口
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.OGI_LanAndIO">
+            <summary>
+            OGI 网口+IO
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.OGI_Lan">
+            <summary>
+            OGI 网口接口
+            </summary>
+        </member>
+        <member name="F:HYC.HTPatternGenerator.EHTPG.Freedom">
+            <summary>
+            freedom 串口
+            </summary>
+        </member>
+        <member name="M:PgController_Bx.FreedomTesterCtrl.PowerOn">
+            <summary>
+            开电
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.FreedomTesterCtrl.PowerOff">
+            <summary>
+            关电
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.FreedomTesterCtrl.Step(System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="nChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.FreedomTesterCtrl.Receive(System.Int32@,System.String@)">
+            <summary>
+            接受数据
+            </summary>
+            <param name="nResult">0:NG \ 1：OK \ -1：没有反应</param>
+            <param name="strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.Init(CommBase.CommInfo,System.Int32)">
+            <summary>
+            初始化
+            </summary>
+            <param name="info"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.UninitDevice">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.PowerOn">
+            <summary>
+            开电
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.PowerOff">
+            <summary>
+            关电
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.StepPattern(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="bt1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.ChangeMode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.PrePattern">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.NextPattern">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.TesterGetMsg">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.Step(System.Int32)">
+            <summary>
+            切图
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.Send(System.Byte[])">
+            <summary>
+            发送数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.Receive(System.Int32@,System.String@)">
+            <summary>
+            接受数据
+            </summary>
+            <param name="nResult"></param>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.ResetEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.WaitForTester">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PgController_Bx.PgCtrl.WaitForTester(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="nTime"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2 @@
+#define CAMERA2D_API __declspec(dllexport)
+#define CAMERA2D_API __declspec(dllimport)

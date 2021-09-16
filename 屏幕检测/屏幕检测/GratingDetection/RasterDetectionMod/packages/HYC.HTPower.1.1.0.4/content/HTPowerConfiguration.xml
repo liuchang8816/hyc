@@ -1,0 +1,7 @@
+﻿<HTPowers>
+  <HTPower Name="BXYZ" Assembly="HYC.HTPower" ClassName="HYC.HTPower.Powers.HTPowerBXYZ"></HTPower>
+  <HTPower Name="JL" Assembly="HYC.HTPower" ClassName="HYC.HTPower.Powers.HTPowerJL"></HTPower>
+  <HTPower Name="P9E" Assembly="HYC.HTPower" ClassName="HYC.HTPower.Powers.HTPowerP9E"></HTPower>
+  <HTPower Name="P9F" Assembly="HYC.HTPower" ClassName="HYC.HTPower.Powers.HTPowerP9F"></HTPower>
+  <HTPower Name="DLC" Assembly="HYC.HTPower" ClassName="HYC.HTPower.Powers.HTPowerDLC"></HTPower>
+</HTPowers>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+
+	<Bitmap_Size>
+		<!--Bitmap尺寸大小-->
+		<Bitmap_Width>3000</Bitmap_Width>
+		<Bitmap_height>1500</Bitmap_height>
+	</Bitmap_Size>
+	
+</Settings>

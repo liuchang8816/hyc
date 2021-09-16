@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--曝光-->
+  <Exposure>1000</Exposure>
+  <!--深度计算参数-->
+  <level>1</level>
+  <maxDepth>30</maxDepth>
+  <minDepth>-30</minDepth>
+  <texture>3</texture>
+  <smoothWindow>1</smoothWindow>
+  <detection>1</detection>
+  <BORW>0</BORW>
+  <thre>0.8</thre>
+  <step_value>1</step_value>
+</Settings>

@@ -1,0 +1,6 @@
+﻿<HTPGs>
+  <HTPG Name="PG1" Assembly="HYC.HTPGH6" ClassName="HYC.HTPGH6.HTPGH6" Index="0"></HTPG>
+  <HTPG Name="PG2" Assembly="HYC.HTPGJC" ClassName="HYC.HTPGJC.HTPGJC" Index="1"></HTPG>
+  <HTPG Name="PG3" Assembly="HYC.HTPGVirtual" ClassName="HYC.HTPGVirtual.HTPGVirl" Index="2"></HTPG>
+  <HTPG Name="SB" Assembly="HYC.HTPGSuBo" ClassName="HYC.HTPGSuBo.HTPGSB" Index="3"></HTPG>
+</HTPGs>

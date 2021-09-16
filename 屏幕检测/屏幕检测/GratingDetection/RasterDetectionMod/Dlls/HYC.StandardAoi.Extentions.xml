@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HYC.StandardAoi.Extentions</name>
+    </assembly>
+    <members>
+        <member name="T:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer">
+            <summary>
+            从相机获取图像的图像数据生产者
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.camera">
+            <summary>
+            Mil相机
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.port">
+            <summary>
+            相机串口
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.startX">
+            <summary>
+            图像裁剪X
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.startY">
+            <summary>
+            图像裁剪Y
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.imgWidth">
+            <summary>
+            图像裁剪Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.imgHeight">
+            <summary>
+            图像裁剪Height
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.#ctor(HYC.HTCamera.Card.Matrox.MilCamera,HYC.HTCamera.Card.Matrox.MilCameraPort)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="camera">Mil相机</param>
+            <param name="port">相机串口</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.#ctor(HYC.HTCamera.Card.Matrox.MilCamera,HYC.HTCamera.Card.Matrox.MilCameraPort,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            构造方法，指定了相机图像裁剪区域
+            </summary>
+            <param name="camera">Mil相机</param>
+            <param name="port">相机串口</param>
+            <param name="startX">图像裁剪X</param>
+            <param name="startY">图像裁剪Y</param>
+            <param name="imgWidth">图像裁剪Width</param>
+            <param name="imgHeight">图像裁剪Height</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置相机图像裁剪区域
+            </summary>
+            <param name="startX">图像裁剪X</param>
+            <param name="startY">图像裁剪Y</param>
+            <param name="imgWidth">图像裁剪Width</param>
+            <param name="imgHeight">图像裁剪Height</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <param name="pattName">画面名称</param>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCXPCameraImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Extentions.FolderImageProducer">
+            <summary>
+            从文件夹获取图像的图像数据生产者
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.FolderImageProducer.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="folder">文件夹</param>
+            <param name="isColor">彩色图片</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.FolderImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <param name="pattName">画面名称</param>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.FolderImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.FolderImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.FolderImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Extentions.GigECameraImageProducer">
+            <summary>
+            从相机获取图像的图像数据生产者
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.#ctor(HYC.HTCamera.GigE.IHTCamera,System.Boolean,System.Drawing.RotateFlipType)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="camera">相机</param>
+            <param name="isUseGrabLock">拍照时是否加锁</param>
+            <param name="rotateFlipType">是否旋转</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.Camera_ImageReceived(System.Object,HYC.HTCamera.GigE.HTCameraEventArgs)">
+            <summary>
+            接收到相机的图像数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.GigECameraImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer">
+            <summary>
+            从相机获取图像的图像数据生产者
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.camera">
+            <summary>
+            Mil相机
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.port">
+            <summary>
+            相机串口
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.startX">
+            <summary>
+            图像裁剪X
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.startY">
+            <summary>
+            图像裁剪Y
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.imgWidth">
+            <summary>
+            图像裁剪Width
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.imgHeight">
+            <summary>
+            图像裁剪Height
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.#ctor(HYC.HTCamera.Card.Matrox.MilCamera,HYC.HTCamera.Card.Matrox.MilCameraPort)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="camera">Mil相机</param>
+            <param name="port">相机串口</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.#ctor(HYC.HTCamera.Card.Matrox.MilCamera,HYC.HTCamera.Card.Matrox.MilCameraPort,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            构造方法，指定了相机图像裁剪区域
+            </summary>
+            <param name="camera">Mil相机</param>
+            <param name="port">相机串口</param>
+            <param name="startX">图像裁剪X</param>
+            <param name="startY">图像裁剪Y</param>
+            <param name="imgWidth">图像裁剪Width</param>
+            <param name="imgHeight">图像裁剪Height</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.SetBmpSize(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置相机图像裁剪区域
+            </summary>
+            <param name="startX">图像裁剪X</param>
+            <param name="startY">图像裁剪Y</param>
+            <param name="imgWidth">图像裁剪Width</param>
+            <param name="imgHeight">图像裁剪Height</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <param name="pattName">画面名称</param>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilAoiCameraImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="T:HYC.StandardAoi.Extentions.MilLineCameraImageProducer">
+            <summary>
+            从相机获取图像的图像数据生产者
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.camera">
+            <summary>
+            Mil相机
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.port">
+            <summary>
+            相机串口
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.subImgCount">
+            <summary>
+            用于合成大图的小图数量
+            </summary>
+        </member>
+        <member name="F:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.grabTimeOut">
+            <summary>
+            拍照超时时间
+            </summary>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.#ctor(HYC.HTCamera.Card.Matrox.MilCamera,HYC.HTCamera.Card.Matrox.MilCameraPort,System.Int32,System.Int32)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="camera">Mil相机</param>
+            <param name="port">相机串口</param>
+            <param name="subImgCount">用于合成大图的小图数量</param>
+            <param name="grabTimeOut">拍照超时时间</param>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.CreateImageData(System.String)">
+            <summary>
+            获取图像数据
+            </summary>
+            <param name="pattName">画面名称</param>
+            <returns>图形数据</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.SetExposureTime(System.Single)">
+            <summary>
+            设置曝光时间
+            </summary>
+            <param name="millisecond">曝光时间，毫秒</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.SetGain(System.Single)">
+            <summary>
+            设置增益
+            </summary>
+            <param name="value">增益值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+        <member name="M:HYC.StandardAoi.Extentions.MilLineCameraImageProducer.SetGamma(System.Boolean,System.Single)">
+            <summary>
+            设置Gamma值
+            </summary>
+            <param name="isEnabled">是否启用Gamma</param>
+            <param name="value">Gamma值</param>
+            <returns>true:成功；false:失败</returns>
+        </member>
+    </members>
+</doc>
